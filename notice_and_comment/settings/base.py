@@ -8,9 +8,9 @@ REGCORE_DATABASES = dict(DATABASES)
 from regulations.settings.base import *
 REGSITE_APPS = tuple(INSTALLED_APPS)
 
-INSTALLED_APPS = ('overextends', 'fec_eregs',) + REGCORE_APPS + REGSITE_APPS
+INSTALLED_APPS = ('overextends', 'notice_and_comment',) + REGCORE_APPS + REGSITE_APPS
 
-ROOT_URLCONF = 'fec_eregs.urls'
+ROOT_URLCONF = 'notice_and_comment.urls'
 
 DATABASES = REGCORE_DATABASES
 
