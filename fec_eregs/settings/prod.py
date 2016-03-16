@@ -2,8 +2,11 @@ import json
 import os
 
 import dj_database_url
+from cfenv import AppEnv
 
 from .base import *
+
+env = AppEnv()
 
 DEBUG = False
 TEMPLATE_DEBUG = False
@@ -26,3 +29,8 @@ if es_config:
         'URL': es_config[0]['credentials']['uri'],
         'INDEX_NAME': 'eregs',
     }
+
+redis = env.get_service(label='redis28-swarm')
+if redis:
+    url = redis.get_url(host='hostname', password='password', port='port')
+    BROKER_URL = 'redis://{}'.format(url)

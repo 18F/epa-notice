@@ -2,7 +2,14 @@
 command: python manage.py migrate --fake-initial && python manage.py rebuild_index --noinput --remove && python manage.py collectstatic --noinput && waitress-serve --port=$VCAP_APP_PORT fec_eregs.wsgi:application
 
 services:
-    - eregsnc-psql
-    - eregsnc-search
+  - eregsnc-psql
+  - eregsnc-search
+  - eregsnc-redis
 env:
   DJANGO_SETTINGS_MODULE: fec_eregs.settings.prod
+applications:
+  - name: eregs-web
+  - name: eregs-worker
+    no-route: true
+    buildpack: python_buildpack
+    command: celery worker --app fec_eregs
