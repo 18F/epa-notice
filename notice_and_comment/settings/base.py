@@ -21,4 +21,6 @@ STATICFILES_DIRS = ['compiled']
 
 # Commenting
 BROKER_URL = 'redis://localhost:6379/0'
-REGS_API_URL = 'https://api.data.gov/regulations/v3/'
+REGS_API_BASE = 'https://api.data.gov/TEST/regulations/v3/comment'
+REGS_API_URL = '{}?api_key={}'.format(
+    REGS_API_BASE, os.environ.get('REGS_API_KEY', 'DEMO_KEY'))
