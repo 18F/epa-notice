@@ -5,6 +5,7 @@ services:
   - eregsnc-psql
   - eregsnc-search
   - eregsnc-redis
+  - eregsnc-s3
 env:
   DJANGO_SETTINGS_MODULE: notice_and_comment.settings.prod
 applications:
