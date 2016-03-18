@@ -11,7 +11,7 @@ Use pip and npm to download the required libraries:
 
 ```bash
 $ pip install -r requirements.txt
-$ npm install -g grunt-cli bower
+$ npm install -g grunt-cli
 ```
 
 Then initialize the database, build the front-end, and run the server:
