@@ -9,6 +9,7 @@ env:
   DJANGO_SETTINGS_MODULE: notice_and_comment.settings.prod
 applications:
   - name: eregs-web
+    host: eregsnc-demo
   - name: eregs-worker
     no-route: true
     buildpack: python_buildpack
