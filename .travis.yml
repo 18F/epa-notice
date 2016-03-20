@@ -1,10 +1,24 @@
 language: python
 sudo: false
 python:
-    - "2.7"
-install: 
-    - pip install -r requirements.txt
-    - npm install -g grunt-cli bower
+  - "3.4"
+env:
+  global:
+    # Set cloud.gov credentials
+    - secure: "J/FNiSemyzShgghIOdsbNLAxJ28Wo9U6/BTAAroKL2d2fGSt0YZvBYGDG8yLjgBqxZDJe+oA5g2K5HhSd5k9qgjVio+g0Iax7U9RALPnVGWTqGSioJpLh/d8rkjbgvdp4Ij5EfqfmCyXFruaqpybUPP3AR9jzghTMHnFwMuljvHRFd9wewBnuL03YAxOQeAB5SSrxLIzg1w7cbuTAqKhisTzJ9QL3w0lm3sZW4/HIfTnjEhpsZJh5yPsSlTY8Ulqfe3S+BkzrbsmQx8LFi15rlP+uPE/2e9t3hQ5w+lSHl3k7axnTsgsu2/V2R9SmM9N5dHgbop8oaitYjjU6fkJSG0usK5CvMWkreTYbDqT2U0MoBhxbNnI5cJUe8ODG+1gAmBeQ1RpmlBCs5RPLs9sZHk16b+lmYKdGtYs4N4NruOH7LD5qCUweQP3sw58KpDXBU0n6AjM50Wj290Dbf16H0B7Q+/BrD8WS2PH8mKilavdadk9MX0k9mGgWenUqYY/WaoWPgRDiNqeWKk0VVgKnWa5Lu9XGPNanrSt+Yay39vIlaxhV1SStKJGgHhjGeC+VnJSD7y+jO3K8h4d56O7nBr2wYQQcwC9d90CPT5UMIpU5FGen4zmDZm+QHO6mcE0VxGkIpsEFu14Ef6O7NSIv8uwJNFHCDx4g3zAD5pjK3Q="
+    - secure: "lzBZFKahgLeGTZ9EsGNGYcYg3uYdTQxi5wV7bc6txYs4QVDNKpMLg/YNx2s5dgiwHh7sku2j5lwzqV/9RkX0WZq0M4c/9h+i8/FttbrDRaMRHtumej3MPLm7Iu4eYbn/hLT0Nbf/1BDklGRTEweYSGKt1C/KrVDKcutUusQOgG/+2H+ywirSBLixtD0cDEFq2vuZGvPmj3yojaS6dzNSS9LPpz4txKTBqzdj428czO50QVEu4zqBWFco8piTmdgEs56aTOAj/8x1DOEJj0bBjIpL+Pw///K/Oaor0hs3ORzd7I31kg7Fg4NkriO5otDv/K4mkeZLv4nUPOfkLTpPwg+MjevEYN2UsYB2z6AqXc6nfBEqz1rpPqbkUrvhlM3zNUFK+6jLlD1v9Y+8iiRb82wxmFOqiJHuZ3aOf1HNfAwgr/SvraAVFFsImASUSucQBuel8C9HZlN4P5n7LrWYcwQMrmL/oMfuXFsWS95riKHfu4MuBOESr201pQlcNlcnTf7NSx99M6MrbQN/DioutYy/s1QHyqRUXt/qxgF3sIdMrOszhcxE4wEBYQuq5ERvU/H2q1kFjkEaDlUDVwpM5pr4vG/5Efh3xU/yJ2VsPAP9/rTMUqi/DPlj+eZoH5ZyaPxN6Fc1b1eORV/jdSGm9L3Avqnu7vv3iU9e+/YMRdw="
+install:
+  - pip install -r requirements.txt
+  - npm install -g grunt-cli
 script:
-    - python manage.py migrate --fake-initial
-    - python manage.py compile_frontend
+  - python manage.py migrate --fake-initial
+  - python manage.py compile_frontend
+before_deploy:
+  - export PATH=$HOME:$PATH
+  - travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.15.0"
+  - tar xzvf $HOME/cf.tgz -C $HOME
+  - travis_retry cf install-plugin autopilot -f -r CF-Community
+deploy:
+  provider: script
+  script: ./deploy-travis.sh
+  skip_cleanup: true
