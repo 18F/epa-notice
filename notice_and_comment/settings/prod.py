@@ -4,7 +4,7 @@ import os
 import dj_database_url
 from cfenv import AppEnv
 
-from .base import *
+from .base import *  # noqa
 
 env = AppEnv()
 

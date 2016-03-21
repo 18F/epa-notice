@@ -1,4 +1,4 @@
-from .base import *
+from .base import *  # noqa
 
 DEBUG = True
 
@@ -10,6 +10,6 @@ CACHES['api_cache']['TIMEOUT'] = 5  # roughly per request
 
 
 try:
-    from local_settings import *
+    from local_settings import *  # noqa
 except ImportError:
     pass

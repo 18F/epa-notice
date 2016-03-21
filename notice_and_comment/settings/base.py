@@ -1,11 +1,11 @@
 import os
 
 
-from regcore.settings.base import *
+from regcore.settings.base import *  # noqa
 REGCORE_APPS = tuple(INSTALLED_APPS)
 REGCORE_DATABASES = dict(DATABASES)
 
-from regulations.settings.base import *
+from regulations.settings.base import *  # noqa
 REGSITE_APPS = tuple(INSTALLED_APPS)
 
 INSTALLED_APPS = ('overextends', 'notice_and_comment',) + REGCORE_APPS + REGSITE_APPS
