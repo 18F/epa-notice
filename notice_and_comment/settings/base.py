@@ -1,8 +1,5 @@
-import json
 import os
 
-from cfenv import AppEnv
-env = AppEnv()
 
 from regcore.settings.base import *
 REGCORE_APPS = tuple(INSTALLED_APPS)
@@ -24,6 +21,9 @@ STATICFILES_DIRS = ['compiled']
 
 # Commenting
 BROKER_URL = 'redis://localhost:6379/0'
-REGS_API_URL = env.get_credential('REGS_API_URL', os.environ.get('REGS_API_URL'))
-REGS_API_KEY = env.get_credential('REGS_API_KEY', os.environ.get('REGS_API_KEY'))
-print("URL: {}, Key: {}".format(REGS_API_URL, REGS_API_KEY))
+
+ACCESS_KEY_ID = os.environ.get('S3_ACCESS_KEY_ID')
+SECRET_ACCESS_KEY = os.environ.get('S3_SECRET_ACCESS_KEY')
+BUCKET = os.environ.get('S3_BUCKET')
+REGS_API_URL = os.environ.get('REGS_API_URL')
+REGS_API_KEY = os.environ.get('REGS_API_KEY')
