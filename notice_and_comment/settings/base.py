@@ -1,6 +1,9 @@
 import json
 import os
 
+from cfenv import AppEnv
+env = AppEnv()
+
 from regcore.settings.base import *
 REGCORE_APPS = tuple(INSTALLED_APPS)
 REGCORE_DATABASES = dict(DATABASES)
@@ -21,6 +24,6 @@ STATICFILES_DIRS = ['compiled']
 
 # Commenting
 BROKER_URL = 'redis://localhost:6379/0'
-REGS_API_BASE = 'https://api.data.gov/TEST/regulations/v3/comment'
-REGS_API_URL = '{}?api_key={}'.format(
-    REGS_API_BASE, os.environ.get('REGS_API_KEY', 'DEMO_KEY'))
+REGS_API_URL = env.get_credential('REGS_API_URL', os.environ.get('REGS_API_URL'))
+REGS_API_KEY = env.get_credential('REGS_API_KEY', os.environ.get('REGS_API_KEY'))
+print("URL: {}, Key: {}".format(REGS_API_URL, REGS_API_KEY))
