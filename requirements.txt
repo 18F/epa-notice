@@ -7,6 +7,7 @@ jsonschema==2.5.1
 # regulations-site
 # django already covered
 requests==2.8.1
+requests-toolbelt==0.6.0
 -e git+https://github.com/18F/regulations-site.git#egg=regulations
 
 # cloud.gov

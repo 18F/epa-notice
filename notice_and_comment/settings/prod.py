@@ -4,7 +4,7 @@ import os
 import dj_database_url
 from cfenv import AppEnv
 
-from .base import *
+from .base import *  # noqa
 
 env = AppEnv()
 
@@ -34,3 +34,14 @@ redis = env.get_service(label='redis28-swarm')
 if redis:
     url = redis.get_url(host='hostname', password='password', port='port')
     BROKER_URL = 'redis://{}'.format(url)
+
+s3 = env.get_service(label='s3')
+if s3:
+    ACCESS_KEY_ID = s3.credentials.get('access_key_id')
+    SECRET_ACCESS_KEY = s3.credentials.get('secret_access_key')
+    BUCKET = s3.credentials.get('bucket')
+
+REGS_API_URL = env.get_credential(
+    'REGS_API_URL', os.environ.get('REGS_API_URL'))
+REGS_API_KEY = env.get_credential(
+    'REGS_API_KEY', os.environ.get('REGS_API_KEY'))
