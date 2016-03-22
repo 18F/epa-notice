@@ -22,8 +22,8 @@ STATICFILES_DIRS = ['compiled']
 # Commenting
 BROKER_URL = 'redis://localhost:6379/0'
 
-ACCESS_KEY_ID = os.environ.get('S3_ACCESS_KEY_ID')
-SECRET_ACCESS_KEY = os.environ.get('S3_SECRET_ACCESS_KEY')
-BUCKET = os.environ.get('S3_BUCKET')
+ATTACHMENT_ACCESS_KEY_ID = os.environ.get('S3_ACCESS_KEY_ID')
+ATTACHMENT_SECRET_ACCESS_KEY = os.environ.get('S3_SECRET_ACCESS_KEY')
+ATTACHMENT_BUCKET = os.environ.get('S3_BUCKET')
 REGS_API_URL = os.environ.get('REGS_API_URL')
 REGS_API_KEY = os.environ.get('REGS_API_KEY')

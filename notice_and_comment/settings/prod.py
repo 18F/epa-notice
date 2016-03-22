@@ -37,9 +37,9 @@ if redis:
 
 s3 = env.get_service(label='s3')
 if s3:
-    ACCESS_KEY_ID = s3.credentials.get('access_key_id')
-    SECRET_ACCESS_KEY = s3.credentials.get('secret_access_key')
-    BUCKET = s3.credentials.get('bucket')
+    ATTACHMENT_ACCESS_KEY_ID = s3.credentials.get('access_key_id')
+    ATTACHMENT_SECRET_ACCESS_KEY = s3.credentials.get('secret_access_key')
+    ATTACHMENT_BUCKET = s3.credentials.get('bucket')
 
 REGS_API_URL = env.get_credential(
     'REGS_API_URL', os.environ.get('REGS_API_URL'))
