@@ -45,3 +45,5 @@ REGS_API_URL = env.get_credential(
     'REGS_API_URL', os.environ.get('REGS_API_URL'))
 REGS_API_KEY = env.get_credential(
     'REGS_API_KEY', os.environ.get('REGS_API_KEY'))
+HTTP_AUTH_USER = env.get_credential('HTTP_AUTH_USER')
+HTTP_AUTH_PASSWORD = env.get_credential('HTTP_AUTH_PASSWORD')
