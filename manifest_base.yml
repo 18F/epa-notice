@@ -1,5 +1,5 @@
 ---
-command: python manage.py migrate --fake-initial && python manage.py rebuild_index --noinput --remove && python manage.py collectstatic --noinput && waitress-serve --port=$VCAP_APP_PORT notice_and_comment.wsgi:application
+command: ./cf-startup.sh
 stack: cflinuxfs2
 services:
   - eregsnc-psql
