@@ -8,4 +8,4 @@ if [ $CF_INSTANCE_INDEX = '0' ]; then
 fi
 
 python manage.py collectstatic --noinput
-waitress-serve --port=$VCAP_APP_PORT notice_and_comment.wsgi:application
+gunicorn notice_and_comment.wsgi:application
