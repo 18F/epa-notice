@@ -1,0 +1,35 @@
+.activate-write {
+  color: @link_blue_inactive;
+  &:hover {
+    color: @link_blue;
+  }
+}
+
+.activate-read {
+  background: @blue;
+  color: @white;
+  &:hover {
+    background-color: darken(@blue, 10%);
+  }
+}
+
+.comment-wrapper .comment button,
+#comment-confirm button,
+a.comment-index-review {
+  background-color: @blue;
+  border-radius: 2px;
+  color: @white;
+  &:hover {
+    background-color: darken(@blue, 10%);
+  }
+}
+
+.comment-index {
+  li {
+    background: @gray;
+    color: @black;
+    &:hover {
+      background: lighten(@gray, 10%);;
+    }
+  }
+}
