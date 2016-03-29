@@ -43,6 +43,8 @@ if s3:
 
 REGS_GOV_API_URL = env.get_credential(
     'REGS_GOV_API_URL', os.environ.get('REGS_GOV_API_URL'))
+REGS_GOV_API_LOOKUP_URL = env.get_credential(
+    'REGS_GOV_API_URL', os.environ.get('REGS_GOV_API_LOOKUP_URL'))
 REGS_GOV_API_KEY = env.get_credential(
     'REGS_GOV_API_KEY', os.environ.get('REGS_GOV_API_KEY'))
 HTTP_AUTH_USER = env.get_credential('HTTP_AUTH_USER')
