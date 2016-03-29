@@ -13,8 +13,8 @@ Universal drawer styles
 .panel {
     background-color: @light_gray;
     border-right: 2px solid @dark_gray;
-    .font-bold;
-    font-size: .875em;
+    .font-regular;
+    font-size: 1em;
     overflow-y: scroll; /* allow content to be scrollable */
 }
 
@@ -48,7 +48,7 @@ Panel Header
         width: 240px;
         height: 40px;
         line-height: 40px;
-        background-color: @light_gray;
+        background-color: @white;
         border-right: 2px solid @dark_gray;
         z-index: 100;
         border-bottom: 1px solid @dark_gray;
@@ -56,7 +56,9 @@ Panel Header
     }
 
     h3 {
-        .drawer-header-font;
+        color: @blue;
+        font-size: 0.875em;
+        text-transform: uppercase;
     }
 }
 
@@ -77,19 +79,25 @@ currently these are TOC, History, and Search
     margin: 0;
     width: 56px;
     text-align: center;
-    border-right: 1px solid @dark_gray;
+    background-color: @white;
+    border-right: 1px solid @light_gray;
     vertical-align: center;
 
     &.current {
-        border-bottom: 1px solid @dark_gray;
+        background-color: @white;
+        border-bottom: none;
     }
 
+}
+
+.drawer-toggle-icon {
+    fill: @blue;
 }
 
 .close {
      .toc-nav-link {
           &.current {
-              background-color: @light_gray;
+              background-color: @white;
               border-bottom: none;
           }
       }
