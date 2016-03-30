@@ -14,4 +14,4 @@ applications:
     host: eregsnc-demo
   - name: eregs-worker
     no-route: true
-    command: celery worker --app notice_and_comment
+    command: celery worker --app notice_and_comment -l DEBUG
