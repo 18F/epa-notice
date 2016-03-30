@@ -30,7 +30,6 @@ changes locally:
 ```bash
 $ python manage.py runserver &    # start the server as a background process
 $ cd path/to/regulations-parser
-$ eregs pipeline 27 479 http://localhost:8000/api   # send the data
 $ eregs notice_preamble 2016-02749
 $ eregs layers
 $ eregs write_to http://localhost:8000/api
