@@ -68,6 +68,3 @@ compiled/
 bin/
 include/
 src/
-
-# OSX
-.DS_Store

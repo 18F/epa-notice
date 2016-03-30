@@ -1,0 +1,26 @@
+/*
+Table of Contents Drawer
+========================
+This contains all of the styles specific to the TOC
+*/
+.regulation-nav {
+
+    a {
+        display: block;
+        padding: 10px 15px;
+        line-height: 1.3;
+    }
+
+    a:link,
+    a:visited {
+        color: @navigation_gray;
+        .border-bottom-light (@width: 0px);
+    }
+
+    a:hover,
+    a:active,
+    .current {
+        color: @black;
+        background-color: @navigation_light_blue;
+    }
+}
