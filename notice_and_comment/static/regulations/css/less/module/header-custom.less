@@ -46,6 +46,10 @@ Site Title
     color: darken(@blue, 10%);
 }
 
+.app-nav-list-text {
+    font-size: 0.8em;
+}
+
 /*
 Big Screens
 */
@@ -53,7 +57,36 @@ Big Screens
   .app-nav-list-item {
       .logo {
           display: inline;
-          margin: 9px 0 0 8px;
+          margin: 8px 0 0 8px;
       }
   }
+  .logo-list-item {
+    margin: 0 0 0 5px;
+  }
+}
+
+/*
+Smaller Screens
+*/
+
+@media only screen and (max-width: 879px) {
+    .mobile-nav-trigger {
+        height: 53px;
+        position: absolute;
+        right: 0;
+        padding: 19px 15px 0 15px;
+    }
+
+    .app-nav-list.open {
+      display: block;
+      position: fixed;
+      top: 56px;
+      width: 100%;
+      background: #F7F8F9;
+      z-index: 999999;
+    }
+
+    .app-nav-list-text {
+      display: none;
+    }
 }
