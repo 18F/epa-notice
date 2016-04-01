@@ -1,0 +1,83 @@
+/* ==========================================================================
+ reg header
+ ========================================================================== */
+
+.main-head {
+  border-bottom: 2px solid @blue;
+  height: 3.5em;
+}
+
+.sub-head {
+  top: 3.5em;
+}
+
+/*
+Application Nav
+================
+*/
+
+.app-nav a {
+  &:link,
+  &:visited {
+    color: @blue;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken(@blue, 10%);;
+  }
+}
+
+/*
+Site Title
+================
+*/
+
+.title a {
+  &:link,
+  &:visited {
+    color: @blue;
+  }
+
+  &:hover,
+  &:active {
+    color: darken(@blue, 10%);
+  }
+}
+
+.app-nav-list-text {
+  font-size: 0.8em;
+}
+
+/*
+Big Screens
+*/
+@media only screen and ( min-width: 880px ) {
+  .app-nav-list-item {
+    .logo {
+      margin: 8px 0 0 8px;
+    }
+  }
+  .logo-list-item {
+    margin: 0 0 0 5px;
+  }
+}
+
+/*
+Smaller Screens
+*/
+
+@media only screen and (max-width: 879px) {
+  .mobile-nav-trigger {
+    height: 53px;
+  }
+
+  .app-nav-list.open {
+    top: 56px;
+  }
+
+  .app-nav-list-text {
+    display: none;
+  }
+}
