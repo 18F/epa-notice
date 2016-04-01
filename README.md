@@ -4,6 +4,14 @@
 Glue project which combines regulations-site, regulations-core and
 styles/templates for Notice and Comment. Packaged as a cloud.gov app.
 
+## Important URLs
+
+* `/preamble/2016_02749/I` - the first section of the preamble associated with
+  an recent EPA proposal
+* `/preamble/2016_02749/cfr_changes/478` - the "authorities" for this CFR part
+* `/preamble/2016_02749/cfr_changes/478-32` - the diff view for a specific
+  section
+
 ## Local Development
 Like regulations-site and regulations-core, this application requires Python 2.7.
 
