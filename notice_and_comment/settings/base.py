@@ -28,3 +28,7 @@ ATTACHMENT_BUCKET = os.environ.get('S3_BUCKET')
 REGS_GOV_API_URL = os.environ.get('REGS_GOV_API_URL')
 REGS_GOV_API_LOOKUP_URL = os.environ.get('REGS_GOV_API_LOOKUP_URL')
 REGS_GOV_API_KEY = os.environ.get('REGS_GOV_API_KEY')
+WKHTMLTOX_PATH = os.getenv(
+    'WKHTMLTOX_PATH',
+    os.path.join(os.path.dirname(__file__), '..', '..', 'wkhtmltox', 'bin'),
+)
