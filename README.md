@@ -22,6 +22,16 @@ $ python manage.py compile_frontend
 $ python manage.py runserver
 ```
 
+To test attachment uploads and comment previews locally, set the
+`ATTACHMENT_BUCKET`, `ATTACHMENT_ACCESS_KEY_ID`, and `ATTACHMENT_SECRET_ACCESS_KEY`
+variables in `local_settings.py`, or the corresponding environment variables.
+To permit cross-origin requests, run `python manage.py setup_cors`.
+
+To test PDF exports locally, install `wkhtmltox`. On Linux, install using
+`python manage.py fetch_wkhtmltox`. Otherwise, follow the
+[install instructions](http://wkhtmltopdf.org/downloads.html), and set
+`WKHTMLTOPDF_PATH` to the path to the `wkhtmltopdf` binary.
+
 ### Data
 
 If you are also working on the parser, it'd be a good idea to test your
@@ -33,7 +43,6 @@ $ cd path/to/regulations-parser
 $ eregs notice_preamble 2016-02749
 $ eregs layers
 $ eregs write_to http://localhost:8000/api
-
 ```
 
 If you aren't working on the parser, you may want to just configure the
