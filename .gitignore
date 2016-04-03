@@ -68,3 +68,6 @@ compiled/
 bin/
 include/
 src/
+
+# wkhtmltox
+wkhtmltox*
