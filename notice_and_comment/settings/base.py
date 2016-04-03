@@ -83,3 +83,12 @@ CFR_CHANGES = {
         ]
     }
 }
+
+WKHTMLTOPDF_PATH = os.getenv(
+    'WKHTMLTOPDF_PATH',
+    # Path to local binary installed with `fetch_wkhtmltox`
+    os.path.join(
+        os.path.dirname(__file__), '..', '..',
+        'wkhtmltox', 'bin', 'wkhtmltopdf',
+    ),
+)

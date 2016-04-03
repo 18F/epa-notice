@@ -62,3 +62,6 @@ local_settings.py
 
 # Local frontend build
 frontend_build/
+
+# wkhtmltox
+wkhtmltox*

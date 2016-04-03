@@ -22,4 +22,6 @@ fi
 
 cf login --a $API --u $CF_USERNAME --p $CF_PASSWORD --o $ORG -s $SPACE
 cf zero-downtime-push $APP_NAME -f $MANIFEST
-cf zero-downtime-push $WORKER_NAME -f $MANIFEST
+# TODO: Restore zero-downtime push after https://github.com/concourse/autopilot/issues/23 is resolved
+# cf zero-downtime-push $WORKER_NAME -f $MANIFEST
+cf push $WORKER_NAME -f $MANIFEST
