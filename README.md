@@ -63,8 +63,8 @@ $ echo "API_BASE = 'https://eregs-nc.apps.cloud.gov/api/'" >> local_settings.py
 ### Ports
 
 For the time being, this application, which cobbles together
-[regulations-core](https://github.com/18F/regulations-core) and
-[regulations-site](https://github.com/18F/regulations-site), makes HTTP calls
+[regulations-core](https://github.com/eregs/regulations-core) and
+[regulations-site](https://github.com/eregs/regulations-site), makes HTTP calls
 to itself. The server therefore needs to know which port it is set up to
 listen on.
 

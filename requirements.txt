@@ -2,14 +2,14 @@
 django==1.8.7
 django-haystack==2.4.1
 jsonschema==2.5.1
--e git+https://github.com/18F/regulations-core.git#egg=regcore
+-e git+https://github.com/eregs/regulations-core.git#egg=regcore
 
 # regulations-site
 # django already covered
 markdown2==2.3.1
 requests==2.8.1
 requests-toolbelt==0.6.0
--e git+https://github.com/18F/regulations-site.git#egg=regulations
+-e git+https://github.com/eregs/regulations-site.git#egg=regulations
 
 # cloud.gov
 celery[redis]==3.1.23
