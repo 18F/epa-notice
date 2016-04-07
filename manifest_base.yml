@@ -14,4 +14,6 @@ applications:
     host: eregsnc-demo
   - name: eregs-worker
     no-route: true
-    command: celery worker --app notice_and_comment -l DEBUG
+    command: >
+      python manage.py fetch_wkhtmltox &&
+      celery worker --app notice_and_comment -loglevel DEBUG
