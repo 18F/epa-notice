@@ -75,7 +75,6 @@ currently these are TOC, History, and Search
 */
 
 .toc-nav-link {
-    display: inline-block;
     background-color: @light_gray;
     color: @navigation_gray;
 
@@ -86,14 +85,9 @@ currently these are TOC, History, and Search
 }
 
 .close {
-     .toc-nav-link {
-          &.current {
-              background-color: @white;
-              border-bottom: none;
-          }
-      }
-
-      .toc-nav-link:hover {
-          border-bottom: none;
-      }
+   .toc-nav-link {
+        &.current {
+            background-color: @white;
+        }
+    }
 }
