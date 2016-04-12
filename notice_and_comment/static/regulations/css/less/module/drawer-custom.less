@@ -19,9 +19,16 @@ Universal drawer styles
 }
 
 .toc-head {
+    a:link,
+    a:visited {
+      color: @navigation_gray;
+    }
+
     a:hover,
-    a:active {
+    a:active,
+    a.current {
         background-color: @white;
+        color: @blue;
     }
 }
 
@@ -69,26 +76,13 @@ currently these are TOC, History, and Search
 
 .toc-nav-link {
     display: inline-block;
-    zoom: 1;
-    *display: inline;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    width: 56px;
-    text-align: center;
-    background-color: @white;
-    border-right: 1px solid @light_gray;
-    vertical-align: center;
+    background-color: @light_gray;
+    color: @navigation_gray;
 
     &.current {
-        background-color: @white;
-        border-bottom: none;
+      background-color: @white;
     }
 
-}
-
-.drawer-toggle-icon {
-    fill: @blue;
 }
 
 .close {
@@ -102,8 +96,4 @@ currently these are TOC, History, and Search
       .toc-nav-link:hover {
           border-bottom: none;
       }
-}
-
-.menu-tab {
-  color: @blue;
 }
