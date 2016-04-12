@@ -23,18 +23,33 @@
     .font-bold;
     height: 33px;
     width: 225px;
+    transition: 0.1s;
 
     .read-icon,
     .write-icon {
-      fill: @dark_text;
+      fill: @navigation_gray;
     }
 
     span {
       padding-left: 5px;
     }
+
+    &:hover:not(.active-mode) {
+      background: @white;
+      color: @blue;
+      height: 32px;
+
+      .read-icon,
+      .write-icon {
+        fill: @blue;
+      }
+    }
   }
 
   .active-mode {
+
+    background: @white;
+    color: @blue;
 
     .read-icon,
     .write-icon {
