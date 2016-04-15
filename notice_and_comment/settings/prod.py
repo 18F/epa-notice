@@ -49,3 +49,6 @@ REGS_GOV_API_KEY = env.get_credential(
     'REGS_GOV_API_KEY', os.environ.get('REGS_GOV_API_KEY'))
 HTTP_AUTH_USER = env.get_credential('HTTP_AUTH_USER')
 HTTP_AUTH_PASSWORD = env.get_credential('HTTP_AUTH_PASSWORD')
+
+# Use redis
+CACHES['regs_gov_cache']['LOCATION'] = BROKER_URL
