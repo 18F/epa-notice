@@ -47,39 +47,41 @@ CFR_CHANGES = {
                 term “Nonimmigrant visa” in alphabetical order to read as
                 follows:""",
              "cfr_part": "478",
-             "changes": {"478-11-p242755046": []}},
+             "changes": [["478-11-p242755046", []]]},
             {"instruction": """
                 3. Section 478.32 is amended by revising the introductory text
                 of paragraphs (a)(5)(ii) and (d)(5)(ii), and by revising
                 paragraph (f), to read as follows:""",
              "cfr_part": "478",
-             "changes": {"478-32-a-5-ii": [], "478-32-d-5-ii": [],
-                         "478-32-f": []}},
+             "changes": [["478-32-a-5-ii", []],
+                         ["478-32-d-5-ii", []],
+                         ["478-32-f", []]]},
             {"instruction": """
                 4. Section 478.44 is amended by revising paragraph
                 (a)(1)(iii), and by revising the second sentence in paragraph
                 (b), to read as follows:""",
              "cfr_part": "478",
-             "changes": {"478-44-a-1-iii": [], "478-44-b": []}},
+             "changes": [["478-44-a-1-iii", []],
+                         ["478-44-b", []]]},
             {"instruction": """
                 5. Section 478.45 is amended by revising the second sentence
                 to read as follows:""",
              "cfr_part": "478",
-             "changes": {"478-45": []}},
+             "changes": [["478-45", []]]},
             {"instruction": """
                 6. Section 478.99 is amended by revising the introductory text
                 of paragraph (c)(5) to read as follows:""",
              "cfr_part": "478",
-             "changes": {"478-99-c-5": []}},
+             "changes": [["478-99-c-5", []]]},
             {"instruction": """
                 7. Section 478.120 is revised to read as follows:""",
              "cfr_part": "478",
-             "changes": {"478-120": []}},
+             "changes": [["478-120", []]]},
             {"instruction": """
                 8. Section 478.124 is amended by revising paragraph
                 (c)(3)(iii) to read as follows:""",
              "cfr_part": "478",
-             "changes": {"478-124-c-3-iii": []}}
+             "changes": [["478-124-c-3-iii", []]]}
         ]
     }
 }
