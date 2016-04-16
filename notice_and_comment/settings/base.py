@@ -23,6 +23,16 @@ STATICFILES_DIRS = ['compiled']
 # Commenting
 BROKER_URL = 'redis://localhost:6379/0'
 
+CACHES['regs_gov_cache'] = {
+    'BACKEND': 'django_redis.cache.RedisCache',
+    'LOCATION': BROKER_URL,
+    'KEY_PREFIX': 'regs.gov',
+    'TIMEOUT': 60*60*24,
+    'OPTIONS': {
+        'IGNORE_EXCEPTIONS': True,
+    }
+}
+
 ATTACHMENT_ACCESS_KEY_ID = os.environ.get('S3_ACCESS_KEY_ID')
 ATTACHMENT_SECRET_ACCESS_KEY = os.environ.get('S3_SECRET_ACCESS_KEY')
 ATTACHMENT_BUCKET = os.environ.get('S3_BUCKET')
