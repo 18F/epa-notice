@@ -34,6 +34,7 @@ redis = env.get_service(label='redis28-swarm')
 if redis:
     url = redis.get_url(host='hostname', password='password', port='port')
     BROKER_URL = 'redis://{}'.format(url)
+    CACHES['regs_gov_cache']['LOCATION'] = BROKER_URL
 
 s3 = env.get_service(label='s3')
 if s3:
@@ -49,6 +50,3 @@ REGS_GOV_API_KEY = env.get_credential(
     'REGS_GOV_API_KEY', os.environ.get('REGS_GOV_API_KEY'))
 HTTP_AUTH_USER = env.get_credential('HTTP_AUTH_USER')
 HTTP_AUTH_PASSWORD = env.get_credential('HTTP_AUTH_PASSWORD')
-
-# Use redis
-CACHES['regs_gov_cache']['LOCATION'] = BROKER_URL
