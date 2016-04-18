@@ -34,6 +34,7 @@ redis = env.get_service(label='redis28-swarm')
 if redis:
     url = redis.get_url(host='hostname', password='password', port='port')
     BROKER_URL = 'redis://{}'.format(url)
+    CACHES['regs_gov_cache']['LOCATION'] = BROKER_URL
 
 s3 = env.get_service(label='s3')
 if s3:

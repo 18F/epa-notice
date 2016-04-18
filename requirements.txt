@@ -6,6 +6,7 @@ jsonschema==2.5.1
 
 # regulations-site
 # django already covered
+django-redis==4.4.1
 markdown2==2.3.1
 requests==2.8.1
 requests-toolbelt==0.6.0
