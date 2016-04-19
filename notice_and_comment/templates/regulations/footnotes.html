@@ -1,0 +1,18 @@
+  {% if sub_context.node.footnotes %}
+  <div class="footnote-box">
+    <h5>Footnotes</h5>
+    <ul class="footnotes">
+      {% for footnote in sub_context.node.footnotes %}
+      <li id="footnote-{{ footnote.ref }}">
+        <span class="reference-num">{{ footnote.ref }}.</span>
+        <p>
+          {{ footnote.note }}
+        </p>
+        <a href="#footnote-jump-{{ footnote.ref }}">
+          <span class="cf-icon cf-icon-up-round"></span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
