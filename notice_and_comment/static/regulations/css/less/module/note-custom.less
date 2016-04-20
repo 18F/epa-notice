@@ -1,4 +1,8 @@
-// N&C specific Footnotes
+/*
+ Custom Footnotes
+ ==========================================================================
+ note-custom.less defines CFPB style footnotes for Notice & Comment
+ */
 
 .footnote-box {
   background-color: none;
@@ -13,11 +17,27 @@
     li {
       border-top: 2px solid @gray;
       padding: 1em 0 0 1em;
+      position: relative;
 
       p {
         margin-left: 1em;
-        padding-right: 2em;
+        width: 90%;
+      }
+
+      .cf-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
       }
     }
   }
+}
+
+// get footnote jump back links to position past fixed header
+.footnote-jump-link:before {
+  content: "";
+  display: inline-block;
+  height: 100px;
+  margin: -100px 0 0;
+  visibility: hidden;
 }
