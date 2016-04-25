@@ -2,6 +2,18 @@
 {% load static from staticfiles %}
 {% load macros %}
 
+{% block title %}{% endblock %}
+
 {% block body %}
-  Read, understand, and comment on new proposed laws.
+
+  <header id="site-header" class="nc-homepage-header" role="banner">
+  {% include "regulations/main-header.html" %}
+  </header>
+
+  <section id-"nc-homepage">
+
+    <h2>Read, understand, and comment on new proposed laws.</h2>
+
+  </section>
+
 {% endblock body %}
