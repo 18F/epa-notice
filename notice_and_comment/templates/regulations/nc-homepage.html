@@ -2,7 +2,7 @@
 {% load static from staticfiles %}
 {% load macros %}
 
-{% block title %}{% endblock %}
+{% block title %}eRegulations{% endblock %}
 
 {% block body %}
 
@@ -10,10 +10,36 @@
   {% include "regulations/main-header.html" %}
   </header>
 
-  <section id-"nc-homepage">
+  <div id="nc-homepage">
 
-    <h2>Read, understand, and comment on new proposed laws.</h2>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Read, understand, and comment on new proposed laws.</h2>
+        <h3>We request your feedback on the following:</h3>
 
-  </section>
+        <div class="proposed-rule">
+
+          <div class="agency">
+            EPA
+          </div>
+
+          <div class="proposed-rule-name">
+            Proposed Rule Name
+          </div>
+
+          <div class="rule-link">
+            Read the proposed rule and write a comment >
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="callout">
+      Even as an individual, you can <strong>substantially change a regulation</strong> by writing a helpful comment on a proposed rule.
+    </section>
+
+
+  </div>
 
 {% endblock body %}
