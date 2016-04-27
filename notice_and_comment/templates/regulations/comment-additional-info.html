@@ -1,0 +1,50 @@
+<div class="additional-info">
+  <h4>Include your information (Optional)</h4>
+
+  <div>I'm submitting on behalf of...</div>
+
+  <div class="tabs">
+    <span data-tab="self">Myself</span>
+    <span data-tab="organization">An organization</span>
+    <span data-tab="agency">A government agency</span>
+  </div>
+
+  <fieldset>
+
+    <div data-tabs='["organization", "agency"]'>
+      <label for="submitter_rep">Submitter's representative</label>
+      <span>First and last name of the person submitting the comment</span>
+      <input type="text" id="submitter_rep" name="submitter_rep" />
+    </div>
+
+    <div data-tabs='["organization"]'>
+      <label for="organization">Organization name</label>
+      <span>The name of the organization you are representing</span>
+      <input type="text" id="organization" name="organization" />
+    </div>
+
+    <div data-tabs='["agency"]'>
+      <label for="gov_agency_type">Government agency type</label>
+      <select id="gov_agency_type" name="gov_agency_type">
+        <option></option>
+        <option value="Federal">Federal</option>
+        <option value="State">State</option>
+        <option value="Local">Local</option>
+        <option value="Tribal">Tribal</option>
+        <option value="Regional">Regional</option>
+        <option value="Foreign">Foreign</option>
+        <option value="U.S. House of Representatives">U.S. House of Representatives</option>
+        <option value="U.S. Senate">U.S. Senate</option>
+      </select>
+    </div>
+
+    <div data-tabs="['agency']">
+      <label for="gov_agency">Government agency</label>
+      <select id="gov_agency" name="gov_agency" data-depends-on="gov_agency_type" data-dependencies='{"Federal": [["ACF", "ACF - Administration of Children and Families"], ["ACFR", "Administrative Committee of the Federal Register"]]}'>
+        <option></option>
+      </select>
+    </div>
+
+  </fieldset>
+
+</div>
