@@ -4,26 +4,26 @@
   <div>I'm submitting on behalf of...</div>
 
   <div class="tabs">
-    <span data-tab="self">Myself</span>
-    <span data-tab="organization">An organization</span>
-    <span data-tab="agency">A government agency</span>
+    <span data-tab-set="commenter" data-tab="self">Myself</span>
+    <span data-tab-set="commenter" data-tab="organization">An organization</span>
+    <span data-tab-set="commenter" data-tab="agency">A government agency</span>
   </div>
 
   <fieldset>
 
-    <div data-tabs='["organization", "agency"]'>
+    <div data-tab-set="commenter" data-tabs='["organization", "agency"]'>
       <label for="submitter_rep">Submitter's representative</label>
       <span>First and last name of the person submitting the comment</span>
       <input type="text" id="submitter_rep" name="submitter_rep" />
     </div>
 
-    <div data-tabs='["organization"]'>
+    <div data-tab-set="commenter" data-tabs='["organization"]'>
       <label for="organization">Organization name</label>
       <span>The name of the organization you are representing</span>
       <input type="text" id="organization" name="organization" />
     </div>
 
-    <div data-tabs='["agency"]'>
+    <div data-tab-set="commenter" data-tabs='["agency"]'>
       <label for="gov_agency_type">Government agency type</label>
       <select id="gov_agency_type" name="gov_agency_type">
         <option></option>
@@ -40,8 +40,10 @@
 
     <div data-tabs="['agency']">
       <label for="gov_agency">Government agency</label>
-      <select id="gov_agency" name="gov_agency" data-depends-on="gov_agency_type" data-dependencies='{"Federal": [["ACF", "ACF - Administration of Children and Families"], ["ACFR", "Administrative Committee of the Federal Register"]]}'>
+      <select id="gov_agency" name="gov_agency" data-depends-on="gov_agency_type">
         <option></option>
+        <option value="ACF" data-dependency="Federal">ACF - Administration of Children and Families</option>
+        <option value="ACFR" data-dependency="Federal">ACFR - Administrative Committee of the Federal Register</option>
       </select>
     </div>
 
