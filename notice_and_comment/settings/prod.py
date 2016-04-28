@@ -50,3 +50,9 @@ REGS_GOV_API_KEY = env.get_credential(
     'REGS_GOV_API_KEY', os.environ.get('REGS_GOV_API_KEY'))
 HTTP_AUTH_USER = env.get_credential('HTTP_AUTH_USER')
 HTTP_AUTH_PASSWORD = env.get_credential('HTTP_AUTH_PASSWORD')
+
+# HTTP Auth may have be different due to the above lines
+if HTTP_AUTH_USER and HTTP_AUTH_PASSWORD:
+    API_BASE = 'http://{}:{}@localhost:{}/api/'.format(
+        HTTP_AUTH_USER, HTTP_AUTH_PASSWORD,
+        os.environ.get('VCAP_APP_PORT', '8000'))
