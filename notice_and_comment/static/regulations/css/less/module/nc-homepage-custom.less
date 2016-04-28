@@ -6,29 +6,133 @@
   }
 }
 
-#nc-homepage {
+.nc-homepage {
+  .font-regular;
+
+  h2 {
+    .font-light;
+    font-size: 40px;
+    line-height: 45px;
+  }
 
   .hero {
     background-color: unset;
     border-bottom: none;
     overflow: auto;
+    padding-top: 30px;
     width: 100%;
   }
 
   .hero-content {
-    max-width: 825px;
+    max-width: 820px;
     margin: auto;
+
+    h3 {
+      font-size: 28px;
+      margin: 25px 0;
+    }
   }
 
   .proposed-rule {
-    border: 1px solid @grey;
-    margin: 15px 0;
+    border: 1px solid @gray;
+    padding: 25px;
+
+    .agency {
+      color: @dark_blue;
+      .font-bold;
+      display: inline-block;
+      line-height: 45px;
+      font-size: 40px;
+      vertical-align: top;
+      width: 100px;
+    }
+
+    .proposed-rule-name {
+      display: inline-block;
+      .font-bold;
+      font-size: 20px;
+      max-width: 600px;
+      vertical-align: top;
+    }
   }
 
-  .rule-link {
-    background-color: @blue;
+  .read-proposed-rule {
+    background-color: @dark_blue;
     color: @white;
-    padding: 5px 0;
+    font-size: 16px;
+    padding: 7px 7px 7px 125px;
+
+    .fa {
+      padding-left: 5px;
+      vertical-align: middle;
+    }
   }
 
+  .call-out {
+    background-color: @light_gray;
+    margin: 60px 0;
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .call-out-content {
+    .font-light;
+    font-size: 30px;
+    line-height: 35px;
+    margin: auto;
+    max-width: 620px;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .read-and-write,
+  .about-this-tool {
+    max-width: 820px;
+    margin: 20px auto;
+  }
+
+  .read-and-write {
+
+    ul {
+      margin: 50px 10px;
+
+      img {
+        display: inline-block;
+      }
+      div {
+        display: inline-block;
+        margin: 10px 0 0 20px;
+        max-width: 560px;
+        vertical-align: top;
+      }
+    }
+
+    .other-ways {
+      background-color: @light_gray;
+      .font-bold;
+      padding: 10px;
+    }
+  }
+
+  .good-comment {
+    background-color: @orange;
+    margin: 50px 0;
+    padding: 80px 0;
+  }
+
+  .good-comment-content {
+    margin: auto;
+    max-width: 670px;
+  }
+
+  .about-this-tool {
+    padding: 50px 0;
+
+    .feedback {
+      background-color: @light_gray;
+      padding: 25px;
+    }
+  }
 }
