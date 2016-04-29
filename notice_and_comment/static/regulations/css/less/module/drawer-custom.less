@@ -11,25 +11,27 @@ Universal drawer styles
 --------------------- */
 
 .panel {
-    background-color: @light_gray;
-    border-right: 2px solid @dark_gray;
-    .font-regular;
-    font-size: 1em;
-    overflow-y: scroll; /* allow content to be scrollable */
+  background-color: @light_gray;
+  border-right: 2px solid @dark_gray;
+  .font-regular;
+  font-size: 1em;
+  overflow-y: scroll; /* allow content to be scrollable */
 }
 
 .toc-head {
-    a:link,
-    a:visited {
-      color: @navigation_gray;
-    }
+  border-right: 2px solid @dark_gray;
 
-    a:hover,
-    a:active,
-    a.current {
-        background-color: @white;
-        color: @blue;
-    }
+  a:link,
+  a:visited {
+    color: @navigation_gray;
+  }
+
+  a:hover,
+  a:active,
+  a.current {
+      background-color: @white;
+      color: @blue;
+  }
 }
 
 /*
@@ -84,5 +86,8 @@ currently these are TOC, History, and Search
         &.current {
             background-color: @white;
         }
+    }
+    .panel-slide {
+      border-bottom: 1px solid @dark_gray;
     }
 }
