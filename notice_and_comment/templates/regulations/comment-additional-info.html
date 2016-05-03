@@ -27,14 +27,9 @@
       <label for="gov_agency_type">Government agency type</label>
       <select id="gov_agency_type" name="gov_agency_type">
         <option></option>
-        <option value="Federal">Federal</option>
-        <option value="State">State</option>
-        <option value="Local">Local</option>
-        <option value="Tribal">Tribal</option>
-        <option value="Regional">Regional</option>
-        <option value="Foreign">Foreign</option>
-        <option value="U.S. House of Representatives">U.S. House of Representatives</option>
-        <option value="U.S. Senate">U.S. Senate</option>
+        {% for option in comment_fields.gov_agency_type.options %}
+          <option value="{{option.value}}">{{option.label}}</option>
+        {% endfor %}
       </select>
     </div>
 
@@ -42,8 +37,11 @@
       <label for="gov_agency">Government agency</label>
       <select id="gov_agency" name="gov_agency" data-depends-on="gov_agency_type">
         <option></option>
-        <option value="ACF" data-dependency="Federal">ACF - Administration of Children and Families</option>
-        <option value="ACFR" data-dependency="Federal">ACFR - Administrative Committee of the Federal Register</option>
+        {% for dependency, options in comment_fields.gov_agency.options.items %}
+          {% for option in options %}
+            <option value="{{option.value}}" data-dependency="{{dependency}}">{{option.label}}</option>
+          {% endfor %}
+        {% endfor %}
       </select>
     </div>
 

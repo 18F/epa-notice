@@ -15,8 +15,12 @@ ROOT_URLCONF = 'notice_and_comment.urls'
 
 DATABASES = REGCORE_DATABASES
 
-API_BASE = 'http://localhost:{}/api/'.format(
-    os.environ.get('VCAP_APP_PORT', '8000'))
+_port = os.environ.get('VCAP_APP_PORT', '8000')
+if HTTP_AUTH_USER and HTTP_AUTH_PASSWORD:
+    API_BASE = 'http://{}:{}@localhost:{}/api/'.format(
+        HTTP_AUTH_USER, HTTP_AUTH_PASSWORD, _port)
+else:
+    API_BASE = 'http://localhost:{}/api/'.format(_port)
 
 STATICFILES_DIRS = ['compiled']
 
@@ -192,4 +196,14 @@ WKHTMLTOPDF_PATH = os.getenv(
         os.path.dirname(__file__), '..', '..',
         'wkhtmltox', 'bin', 'wkhtmltopdf',
     ),
+)
+
+MIDDLEWARE_CLASSES = (
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
+    'notice_and_comment.basic_auth.BasicAuthMiddleware'
 )
