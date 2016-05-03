@@ -52,6 +52,10 @@
     }
   }
 
+/*
+Proposed Rule Box
+================
+*/
   .proposed-rule {
     background-color: @white;
     border: 1px solid @gray;
@@ -86,8 +90,16 @@
       padding-left: 5px;
       vertical-align: middle;
     }
+
+    a {
+      color: @white;
+    }
   }
 
+/*
+Call Out Comment after Hero
+================
+*/
   .call-out {
     background-color: @light_gray;
     margin: 60px 0;
@@ -113,6 +125,10 @@
     margin: 20px auto;
   }
 
+/*
+Read and write with ease
+================
+*/
   .read-and-write {
 
     ul {
@@ -153,10 +169,77 @@
     }
   }
 
+/*
+Build a good comment
+================
+*/
   .good-comment {
-    background-color: @orange;
+    background-color: @light_gray;
     margin: 50px 0;
     padding: 80px 0;
+
+    h2 {
+      margin-bottom: 1.2em;
+    }
+
+    ul {
+      padding-left: 0;
+      margin-bottom: 50px;
+    }
+
+    li {
+      margin-bottom: 2em;
+      position: relative;
+
+      .triangle {
+        background-color: @orange;
+        margin-right: 40px;
+        position: absolute;
+        text-align: left;
+        top: 2px;
+        transform: rotate(-90deg) skewX(-30deg) scale(1,.866);
+
+        &:before {
+          transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+        }
+
+        &:after {
+          transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+        }
+
+        &:before,
+        &:after {
+          background-color: inherit;
+          content: '';
+          position: absolute;
+        }
+      }
+
+      .triangle,
+      .triangle:before,
+      .triangle:after {
+        border-top-right-radius: 30%;
+        height: 1em;
+        width:  1em;
+      }
+
+      span {
+        display: inline-block;
+        margin-left: 60px;
+      }
+    }
+
+    .more-tips {
+      display: inline-block;
+      .font-bold;
+      vertical-align: top;
+      width: 170px;
+    }
+    .more-tips-links {
+      display: inline-block;
+      max-width: 450px;
+      vertical-align: top;
+    }
   }
 
   .good-comment-content {
@@ -164,12 +247,57 @@
     max-width: 670px;
   }
 
+/*
+About this tool
+================
+*/
   .about-this-tool {
     padding: 50px 0;
 
+    .about-this-tool-content {
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    .about-this-tool-info {
+      padding-left: 40px;
+    }
+
     .feedback {
-      background-color: @light_gray;
-      padding: 25px;
+      background-color: @light_orange;
+      padding: 15px 25px;
+    }
+
+    h4 {
+      text-transform: none;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+/*
+Footer partnership logos
+================
+*/
+  .footer {
+    border-top: 2px solid @blue;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 50px;
+    padding: 20px 13px;
+
+    span {
+      display: inline-block;
+      font-size: 0.8em;
+      line-height: 5em;
+    }
+
+    .logo {
+      display: inline-block;
+      margin: 8px 0 0 8px;
     }
   }
 }
