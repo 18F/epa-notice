@@ -36,22 +36,6 @@
     }
   }
 
-  .comments-date {
-    border-bottom: 1px solid @light_blue;
-    font-size: 18px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-
-    .due {
-      float: left;
-    }
-
-    .date {
-      font-size: 15px;
-      float: right;
-    }
-  }
-
 /*
 Proposed Rule Box
 ================
@@ -60,6 +44,22 @@ Proposed Rule Box
     background-color: @white;
     border: 1px solid @gray;
     padding: 25px;
+
+    .comments-date {
+      border-bottom: 1px solid @light_blue;
+      font-size: 18px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+
+      .due {
+        float: left;
+      }
+
+      .date {
+        font-size: 15px;
+        float: right;
+      }
+    }
 
     .agency {
       color: @dark_blue;
@@ -298,6 +298,113 @@ Footer partnership logos
     .logo {
       display: inline-block;
       margin: 8px 0 0 8px;
+    }
+  }
+}
+
+
+// tablet + mobile
+@media only screen and ( max-width: 780px ) {
+
+
+}
+
+@media only screen and ( max-width: 480px ) {
+
+  .nc-homepage {
+
+    h2 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .hero {
+      background-size: cover;
+      padding-top: 0;
+      text-align: center;
+    }
+
+    .hero-content h3 {
+      font-size: 23px;
+      margin: 0 0 15px 0;
+    }
+
+    .proposed-rule {
+      padding: 10px;
+
+      .comments-date {
+        .due,
+        .date {
+          float: none;
+        }
+      }
+    }
+
+    .read-proposed-rule {
+      padding: 7px;
+    }
+
+    .call-out {
+      margin: 0;
+    }
+
+    .call-out-content {
+      font-size: 25px;
+      line-height: 30px;
+      padding: 0 15px;
+    }
+
+    .read-and-write {
+      text-align: center;
+
+      ul {
+        margin: 20px 0;
+
+        li {
+          margin: 25px;
+        }
+
+        .image {
+          width: auto;
+        }
+
+        .content {
+          margin: 0;
+        }
+      }
+    }
+
+    .good-comment {
+      margin: 0;
+      padding: 20px;
+
+      h2 {
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      li span {
+        margin-left: 40px;
+      }
+    }
+
+    .about-this-tool {
+      padding: 0 20px;
+      text-align: center;
+
+      .about-this-tool-content {
+        display: block;
+      }
+
+      .about-this-tool-info {
+        padding-left: 0;
+      }
+    }
+
+    .footer {
+      display: block;
+      text-align: center;
+      padding: 10px;
     }
   }
 }
