@@ -29,8 +29,8 @@ BROKER_URL = 'redis://localhost:6379/0'
 CELERY_ACKS_LATE = True
 
 CACHES['regs_gov_cache'] = {
-    'BACKEND': 'django_redis.cache.RedisCache',
-    'LOCATION': BROKER_URL,
+    'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+    'LOCATION': '/tmp/regs_gov_cache',
     'KEY_PREFIX': 'regs.gov',
     'TIMEOUT': 60 * 60 * 24,
     'OPTIONS': {
