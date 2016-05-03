@@ -35,6 +35,8 @@ if redis:
     url = redis.get_url(host='hostname', password='password', port='port')
     BROKER_URL = 'redis://{}'.format(url)
     CACHES['regs_gov_cache']['LOCATION'] = BROKER_URL
+    CACHES['regs_gov_cache']['BACKEND'] = 'django_redis.cache.RedisCache'
+
 
 s3 = env.get_service(label='s3')
 if s3:
