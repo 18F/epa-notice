@@ -108,30 +108,32 @@ PREAMBLE_INTRO = {
     "0000_0000": {
         "meta": {
             "primary_agency": "Environmental Protection Agency",
-            "agencies": ["Environmental Protection Agency"],
-            "action": "Proposed rule",
             "title": "EPA's new proposal",
             "comments_close": "2016-05-29",
-            "publication": "2016-02-29",
-            "cfr_parts": [{"title": "40", "parts": ["300"]}],
+            "publication": "2016-02-29",    # to be removed
+            "publication_date": "2016-02-29",
+            "cfr_parts": [{"title": "40", "parts": ["300"]}], # to be removed
+            "cfr_refs": [{"title": "40", "parts": ["300"]}],
             "dockets": ["EPA-HQ-SFUND-2010-1086",
                         "FRL-9925-69-OLEM"],
-            "rins": ["2050-AG67"],
+            "rins": ["2050-AG67"],  # to be removed
+            "regulatory_id_numbers": ["2050-AG67"],
         }
     },
     "2016_02749": {
         "meta": {
             "primary_agency": "Environmental Protection Agency",
-            "agencies": ["Environmental Protection Agency"],
-            "action": "Proposed rule",
             "title": ("Addition of a Subsurface Intrusion Component to the "
                       "Hazard Ranking System"),
             "comments_close": "2016-04-29",
-            "publication": "2016-02-29",
-            "cfr_parts": [{"title": "40", "parts": ["300"]}],
+            "publication": "2016-02-29",    # to be removed
+            "publication_date": "2016-02-29",
+            "cfr_parts": [{"title": "40", "parts": ["300"]}], # to be removed
+            "cfr_refs": [{"title": "40", "parts": ["300"]}],
             "dockets": ["EPA-HQ-SFUND-2010-1086",
                         "FRL-9925-69-OLEM"],
-            "rins": ["2050-AG67"],
+            "rins": ["2050-AG67"],  # to be removed
+            "regulatory_id_numbers": ["2050-AG67"],
         }
     }
 }
