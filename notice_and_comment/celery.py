@@ -1,5 +1,8 @@
 from __future__ import absolute_import
 
+from notice_and_comment import newrelic
+newrelic.initialize()
+
 import os
 
 from celery import Celery

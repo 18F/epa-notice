@@ -18,6 +18,7 @@ cfenv==0.5.2
 dj-database-url==0.3.0
 django-overextends==0.4.0
 gunicorn==19.4.5
+newrelic==2.64.0.48
 pyelasticsearch==1.4
 psycopg2==2.6.1
 whitenoise==2.0.6
