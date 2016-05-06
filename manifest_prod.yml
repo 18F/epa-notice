@@ -1,3 +1,5 @@
 ---
 inherit: manifest_base.yml
 host: eregsnc
+env:
+  NEW_RELIC_APP_NAME: notice-comment-prod
