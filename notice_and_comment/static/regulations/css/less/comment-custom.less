@@ -41,6 +41,10 @@
     &:hover a {
       color: @blue;
     }
+
+    &:hover:not(.active-mode) {
+      background: lighten(@gray, 10%);
+    }
   }
 
   .active-mode {
