@@ -24,24 +24,31 @@
     width: 225px;
     transition: 0.1s;
 
+    a {
+      color: @navigation_gray;
+      padding-left: 5px;
+    }
+
+    &.active-mode a {
+      color: @blue;
+    }
+
     .read-icon,
     .write-icon {
       fill: @navigation_gray;
     }
 
-    &:hover:not(.active-mode) {
-      background: @white;
+    &:hover span,
+    &:hover a {
       color: @blue;
+    }
 
-      .read-icon,
-      .write-icon {
-        fill: @blue;
-      }
+    &:hover:not(.active-mode) {
+      background: lighten(@gray, 10%);
     }
   }
 
   .active-mode {
-
     background: @white;
     color: @blue;
 
