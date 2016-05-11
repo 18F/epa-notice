@@ -1,30 +1,30 @@
 <div class="additional-info">
   <h4>Include your information (Optional)</h4>
 
-  <div>I'm submitting on behalf of...</div>
+  <div class="comment-form-fieldlabel">I'm submitting on behalf of...</div>
 
-  <div class="tabs">
-    <span data-tab-set="commenter" data-tab="self">Myself</span>
-    <span data-tab-set="commenter" data-tab="organization">An organization</span>
-    <span data-tab-set="commenter" data-tab="agency">A government agency</span>
+  <div class="tabs btn-group" role"group">
+    <div data-tab-set="commenter" data-tab="self" class="btn-group-item">Myself</div>
+    <div data-tab-set="commenter" data-tab="organization" class="btn-group-item">An Organization</div>
+    <div data-tab-set="commenter" data-tab="agency" class="btn-group-item">A Government Agency</div>
   </div>
 
   <fieldset>
 
-    <div data-tab-set="commenter" data-tabs='["organization", "agency"]'>
-      <label for="submitter_rep">Submitter's representative</label>
-      <span>First and last name of the person submitting the comment</span>
+    <div class="labeled-field" data-tab-set="commenter" data-tabs='["organization", "agency"]'>
+      <label for="submitter_rep" class="comment-form-fieldlabel">Submitter's representative</label>
+      <span class="comment-form-subtext">First and last name of the person submitting the comment</span>
       <input type="text" id="submitter_rep" name="submitter_rep" />
     </div>
 
-    <div data-tab-set="commenter" data-tabs='["organization"]'>
-      <label for="organization">Organization name</label>
-      <span>The name of the organization you are representing</span>
+    <div class="labeled-field" data-tab-set="commenter" data-tabs='["organization"]'>
+      <label for="organization" class="comment-form-fieldlabel">Organization name</label>
+      <span class="comment-form-subtext">The name of the organization you are representing</span>
       <input type="text" id="organization" name="organization" />
     </div>
 
-    <div data-tab-set="commenter" data-tabs='["agency"]'>
-      <label for="gov_agency_type">Government agency type</label>
+    <div class="labeled-field" data-tab-set="commenter" data-tabs='["agency"]'>
+      <label for="gov_agency_type" class="comment-form-fieldlabel">Government agency type</label>
       <select id="gov_agency_type" name="gov_agency_type">
         <option></option>
         {% for option in comment_fields.gov_agency_type.options %}
@@ -33,8 +33,8 @@
       </select>
     </div>
 
-    <div data-tabs="['agency']">
-      <label for="gov_agency">Government agency</label>
+    <div class="labeled-field" data-tabs="['agency']">
+      <label for="gov_agency" class="comment-form-fieldlabel">Government agency</label>
       <select id="gov_agency" name="gov_agency" data-depends-on="gov_agency_type">
         <option></option>
         {% for dependency, options in comment_fields.gov_agency.options.items %}
