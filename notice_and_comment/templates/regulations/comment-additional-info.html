@@ -25,24 +25,28 @@
 
     <div class="labeled-field" data-tab-set="commenter" data-tabs='["agency"]'>
       <label for="gov_agency_type" class="comment-form-fieldlabel">Government agency type</label>
-      <select id="gov_agency_type" name="gov_agency_type">
-        <option></option>
-        {% for option in comment_fields.gov_agency_type.options %}
-          <option value="{{option.value}}">{{option.label}}</option>
-        {% endfor %}
-      </select>
+      <div class="select-dropdown">
+        <select id="gov_agency_type" name="gov_agency_type">
+          <option>Select an agency type</option>
+          {% for option in comment_fields.gov_agency_type.options %}
+            <option value="{{option.value}}">{{option.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
     </div>
 
     <div class="labeled-field" data-tabs="['agency']">
       <label for="gov_agency" class="comment-form-fieldlabel">Government agency</label>
-      <select id="gov_agency" name="gov_agency" data-depends-on="gov_agency_type">
-        <option></option>
-        {% for dependency, options in comment_fields.gov_agency.options.items %}
-          {% for option in options %}
-            <option value="{{option.value}}" data-dependency="{{dependency}}">{{option.label}}</option>
+      <div class="select-dropdown">
+        <select id="gov_agency" name="gov_agency" data-depends-on="gov_agency_type">
+          <option>Select an agency</option>
+          {% for dependency, options in comment_fields.gov_agency.options.items %}
+            {% for option in options %}
+              <option value="{{option.value}}" data-dependency="{{dependency}}">{{option.label}}</option>
+            {% endfor %}
           {% endfor %}
-        {% endfor %}
-      </select>
+        </select>
+      </div>
     </div>
 
   </fieldset>
