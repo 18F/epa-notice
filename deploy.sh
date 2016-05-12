@@ -28,5 +28,8 @@ cf zero-downtime-push $APP_NAME -f $MANIFEST
 cf push $WORKER_NAME -f $MANIFEST
 
 if [ $SPACE = 'prod' ]; then
+  # Scale outside of the application manifest so that we avoid hitting a
+  # memory ceiling. Note that this workaround won't be needed when the memory
+  # quota goes away
   cf scale $APP_NAME -i $PROD_INSTANCES
 fi
