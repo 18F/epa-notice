@@ -35,17 +35,20 @@
       </div>
     </div>
 
-    <div class="labeled-field" data-tabs="['agency']">
+    <div class="labeled-field" data-tab-set="commenter" data-tabs="['agency']">
       <label for="gov_agency" class="comment-form-fieldlabel">Government agency</label>
-      <div class="select-dropdown">
-        <select id="gov_agency" name="gov_agency" data-depends-on="gov_agency_type">
-          <option>Select an agency</option>
-          {% for dependency, options in comment_fields.gov_agency.options.items %}
-            {% for option in options %}
-              <option value="{{option.value}}" data-dependency="{{dependency}}">{{option.label}}</option>
+      <div data-depends-on="gov_agency_type">
+        <input type="text" id="gov_agency_text" name="gov_agency" />
+        <div class="select-dropdown" style="display: none">
+          <select id="gov_agency_select" name="gov_agency" style="display: none" disabled>
+            <option>Select an agency</option>
+            {% for dependency, options in comment_fields.gov_agency.options.items %}
+              {% for option in options %}
+                <option value="{{option.value}}" data-dependency="{{dependency}}">{{option.label}}</option>
+              {% endfor %}
             {% endfor %}
-          {% endfor %}
-        </select>
+          </select>
+        </div>
       </div>
     </div>
 
