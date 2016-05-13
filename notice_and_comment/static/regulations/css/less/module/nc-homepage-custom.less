@@ -184,19 +184,41 @@ Read and write with ease
     }
 
     .other-ways {
-      align-items: center;
-      background-color: @light_gray;
-      display: -webkit-flex;
-      display: flex;
       .font-bold;
-      padding: 10px 15px;
+      max-width: 650px;
 
-      .text {
-        align-self: flex-start;
+      .button {
+        align-items: center;
+        background-color: @light_gray;
+        cursor: pointer;
+        display: -webkit-flex;
+        display: flex;
+        padding: 10px 15px;
+
+        .button-title {
+          align-self: flex-start;
+        }
+
+        .cf-icon {
+          margin-left: auto;
+        }
       }
 
-      .cf-icon {
-        margin-left: auto;
+      .collapsible {
+        margin: 25px 15px;
+
+        ul {
+          margin: 0;
+        }
+
+        li {
+          list-style-type: disc;
+          margin: 0 0 10px 30px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
