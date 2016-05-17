@@ -15,6 +15,36 @@
   }
 }
 
+.comment-button,
+a.comment-index-review {
+  background-color: @blue;
+  border-radius: 2px;
+  color: @white;
+
+  &:hover {
+    background-color: darken(@blue, 10%);
+  }
+}
+
+.comment-header {
+  & > a {
+    color: @black;
+    border-bottom: 2px solid @link_blue;
+  }
+}
+
+.comment-index {
+
+  li {
+    background: @gray;
+    color: @black;
+
+    &:hover {
+      background: lighten(@gray, 10%);;
+    }
+  }
+}
+
 .preamble-header {
 
   .read-proposal,
@@ -59,30 +89,6 @@
   }
 }
 
-
-.comment-button,
-a.comment-index-review {
-  background-color: @blue;
-  border-radius: 2px;
-  color: @white;
-
-  &:hover {
-    background-color: darken(@blue, 10%);
-  }
-}
-
-.comment-index {
-
-  li {
-    background: @gray;
-    color: @black;
-
-    &:hover {
-      background: lighten(@gray, 10%);;
-    }
-  }
-}
-
 #preamble-read {
   .cfr-instructions {
     font-family: "Merriweather", Georgia, serif;
@@ -91,6 +97,21 @@ a.comment-index-review {
 
   .show-more-context {
     background-color: @light_gray;
-    color: @blue;
+    color: @link_blue;
+  }
+}
+
+
+#comment-review {
+  .statement {
+    .show-more-toggle {
+      display: inline;
+      color: @link_blue;
+      font-size: 14px;
+
+      &:hover {
+        color: darken(@link_blue, 10%);
+      }
+    }
   }
 }
