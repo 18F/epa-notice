@@ -37,10 +37,10 @@
 
     <div class="labeled-field" data-tab-set="commenter" data-tabs="['agency']">
       <label for="gov_agency" class="comment-form-fieldlabel">Government agency</label>
-      <div data-depends-on="gov_agency_type">
-        <input type="text" id="gov_agency_text" name="gov_agency" />
-        <div class="select-dropdown" style="display: none">
-          <select id="gov_agency_select" name="gov_agency" style="display: none" disabled>
+      <div>
+        <input type="text" id="gov_agency_text" name="gov_agency" data-writein-for="gov_agency_select" />
+        <div class="select-dropdown" style="display: none" data-depends-on="gov_agency_type">
+          <select id="gov_agency_select" name="gov_agency" disabled>
             <option>Select an agency</option>
             {% for dependency, options in comment_fields.gov_agency.options.items %}
               {% for option in options %}
