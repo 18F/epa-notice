@@ -6,185 +6,194 @@
 
 {% block body %}
 
-  <header id="site-header" class="nc-homepage-header" role="banner">
-  {% include "regulations/main-header.html" %}
-  </header>
+  <div id="content-body">
 
-  <div class="nc-homepage">
+    <header id="site-header" class="nc-homepage-header" role="banner">
+    {% include "regulations/main-header.html" %}
+    </header>
 
-    <div class="hero-background"></div>
+    <div class="nc-homepage">
 
-    <section class="hero">
+      <div class="hero-background"></div>
 
-      <div class="hero-content">
-        <h1>Read, understand, and comment on new proposed laws.</h1>
-        <h2>We request your feedback on the following:</h2>
+      <section class="hero">
 
-        <div class="proposed-rule">
+        <div class="hero-content">
+          <h1>Read, understand, and comment on new proposed laws.</h1>
+          <h2>We request your feedback on the following:</h2>
 
-          <div class="comments-date group">
-            <div class="due">Comments are due in <strong>X days!</strong></div>
-            <div class="date">Ends September XX, 2016 at 11:59pm</div>
+          <div class="proposed-rule">
+
+            <div class="comments-date group">
+              <div class="due">Comments are due in <strong>X days!</strong></div>
+              <div class="date">Ends September XX, 2016 at 11:59pm</div>
+            </div>
+
+            <div class="agency">
+              EPA
+            </div>
+
+            <div class="proposed-rule-title">
+              Hazardous Waste Management System; User Fees for the Electronic Hazardous Waste Manifest System and Amendments to the Manifest Regulations
+            </div>
           </div>
 
-          <div class="agency">
-            EPA
-          </div>
-
-          <div class="proposed-rule-title">
-            Hazardous Waste Management System; User Fees for the Electronic Hazardous Waste Manifest System and Amendments to the Manifest Regulations
+          <div class="read-proposed-rule">
+            <a href="">Read the proposed rule and write a comment <span class="fa fa-chevron-right" aria-hidden="true"></span></a>
           </div>
         </div>
 
-        <div class="read-proposed-rule">
-          <a href="">Read the proposed rule and write a comment <span class="fa fa-chevron-right" aria-hidden="true"></span></a>
+      </section>
+
+      <section class="call-out">
+        <div class="call-out-content">
+          Even as an individual, you can <strong>substantially change a regulation</strong> by writing a helpful comment on a proposed rule.
         </div>
-      </div>
+      </section>
 
-    </section>
+      <section class="read-and-write">
 
-    <section class="call-out">
-      <div class="call-out-content">
-        Even as an individual, you can <strong>substantially change a regulation</strong> by writing a helpful comment on a proposed rule.
-      </div>
-    </section>
-
-    <section class="read-and-write">
-
-      <h2>Read and write with ease</h2>
-
-      <ul>
-        <li>
-          <div class="image">
-            <img class="logo" src="{% static "regulations/img/read.png" %}" alt="Read"/>
-          </div>
-          <div class="content">
-            <h3>Read proposed changes in context</h3>
-            <p>See the proposed changes <strong>highlighted in comparison to the current regulation</strong> at a glance.
-          </div>
-        </li>
-        <li>
-          <div class="image">
-            <img class="logo" src="{% static "regulations/img/write.png" %}" alt="Write"/>
-          </div>
-          <div class="content">
-            <h3>Write responses to individual sections</h3>
-            <p><strong>Respond to sections of the rule,</strong> then submit all your responses together as one neatly-organized comment.</p>
-        </li>
-        <li>
-          <div class="image">
-            <img class="logo" src="{% static "regulations/img/analyze.png" %}" alt="Analyze"/>
-          </div>
-          <div class="content">
-            <h3>Help agencies sort &amp; analyze your comment</h3>
-            <p>When you submit your comment, the agency will see which sections you responded to. <strong>This helps the agency sort and analyze your comments.</strong>
-          </div>
-        </li>
-      </ul>
-
-      <div class="other-ways">
-        <div class="button">
-          <span class="button-title">Other ways to read and comment</span>
-          <span class="cf-icon cf-icon-plus-round"></span>
-        </div>
-        <div class="collapsible">
-          <p>If you prefer, you can use a different way to read and comment on this proposal:</p>
-
-          <ul>
-            <li><a href="">This proposed rule on FederalRegister.gov <span class="cf-icon cf-icon-external-link"></span></a></li>
-            <li><a href="">This proposed rule on Regulations.gov <span class="cf-icon cf-icon-external-link"></span></a></li>
-            <li><a href="">Additional submission formats accepted by EPA <span class="cf-icon cf-icon-external-link"></span></a></li>
-          </ul>
-        </div>
-      </div>
-
-    </section>
-
-    <section class="good-comment">
-
-      <div class="good-comment-content">
-
-        <h2>Build a good comment:</h2>
+        <h2>Read and write with ease</h2>
 
         <ul>
           <li>
-            <div class="triangle"></div>
-            <span>
-              <strong>Explain why</strong> you agree or disagree; suggest alternatives and substitute language for your requested changes.
-            </span>
+            <div class="image">
+              <img class="logo" src="{% static "regulations/img/read.png" %}" alt="Read"/>
+            </div>
+            <div class="content">
+              <h3>Read proposed changes in context</h3>
+              <p>See the proposed changes <strong>highlighted in comparison to the current regulation</strong> at a glance.
+            </div>
           </li>
           <li>
-            <div class="triangle"></div>
-            <span>
-              <strong>Provide specific examples</strong> to illustrate your concerns.
-            </span>
+            <div class="image">
+              <img class="logo" src="{% static "regulations/img/write.png" %}" alt="Write"/>
+            </div>
+            <div class="content">
+              <h3>Write responses to individual sections</h3>
+              <p><strong>Respond to sections of the rule,</strong> then submit all your responses together as one neatly-organized comment.</p>
           </li>
           <li>
-            <div class="triangle"></div>
-            <span>
-              <strong>Base your comments on sound reasoning,</strong> scientific evidence, and/or how you will be impacted by the proposal.
-            </span>
-          </li>
-          <li>
-            <div class="triangle"></div>
-            <span>
-              <strong>Address trade-offs and opposing views.</strong>
-            </span>
-          </li>
-          <li>
-            <div class="triangle"></div>
-            <span>
-              <strong>Identify your relevant credentials and experience.</strong>
-            </span>
-          </li>
-          <li>
-            <div class="triangle"></div>
-            <span>
-              You don't have to comment on everything - you can <strong>select those issues that concern and affect you the most</strong> and/or you understand the best.
-            </span>
+            <div class="image">
+              <img class="logo" src="{% static "regulations/img/analyze.png" %}" alt="Analyze"/>
+            </div>
+            <div class="content">
+              <h3>Help agencies sort &amp; analyze your comment</h3>
+              <p>When you submit your comment, the agency will see which sections you responded to. <strong>This helps the agency sort and analyze your comments.</strong>
+            </div>
           </li>
         </ul>
 
-        <div class="more-tips">
-          Want more tips?
+        <div class="other-ways">
+          <div class="toggle">
+            <div class="button" aria-expanded="false">
+              <span class="button-title">Other ways to read and comment</span>
+              <div class="button-icon">
+                <span class="cf-icon cf-icon-plus-round toggle-button-open" aria-hidden="false"></span>
+                <span class="cf-icon cf-icon-minus-round toggle-button-close" aria-hidden="false"></span>
+              </div>
+            </div>
+            <div class="collapsible" aria-hidden="false">
+              <p>If you prefer, you can use a different way to read and comment on this proposal:</p>
+
+              <ul>
+                <li><a href="">This proposed rule on FederalRegister.gov <span class="cf-icon cf-icon-external-link"></span></a></li>
+                <li><a href="">This proposed rule on Regulations.gov <span class="cf-icon cf-icon-external-link"></span></a></li>
+                <li><a href="">Additional submission formats accepted by EPA <span class="cf-icon cf-icon-external-link"></span></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div class="more-tips-links">
-          <a href="https://www.epa.gov/dockets/commenting-epa-dockets" target="_blank">EPA's tips for writing effective comments <span class="cf-icon cf-icon-external-link"></span></a><br/>
-          <a href="https://www.regulations.gov/docs/Tips_For_Submitting_Effective_Comments.pdf" target="_blank">Regulation.gov's detailed tips for commenting <span class="cf-icon cf-icon-external-link"></span></a>
+      </section>
+
+      <section class="good-comment">
+
+        <div class="good-comment-content">
+
+          <h2>Build a good comment:</h2>
+
+          <ul>
+            <li>
+              <div class="triangle"></div>
+              <span>
+                <strong>Explain why</strong> you agree or disagree; suggest alternatives and substitute language for your requested changes.
+              </span>
+            </li>
+            <li>
+              <div class="triangle"></div>
+              <span>
+                <strong>Provide specific examples</strong> to illustrate your concerns.
+              </span>
+            </li>
+            <li>
+              <div class="triangle"></div>
+              <span>
+                <strong>Base your comments on sound reasoning,</strong> scientific evidence, and/or how you will be impacted by the proposal.
+              </span>
+            </li>
+            <li>
+              <div class="triangle"></div>
+              <span>
+                <strong>Address trade-offs and opposing views.</strong>
+              </span>
+            </li>
+            <li>
+              <div class="triangle"></div>
+              <span>
+                <strong>Identify your relevant credentials and experience.</strong>
+              </span>
+            </li>
+            <li>
+              <div class="triangle"></div>
+              <span>
+                You don't have to comment on everything - you can <strong>select those issues that concern and affect you the most</strong> and/or you understand the best.
+              </span>
+            </li>
+          </ul>
+
+          <div class="more-tips">
+            Want more tips?
+          </div>
+
+          <div class="more-tips-links">
+            <a href="https://www.epa.gov/dockets/commenting-epa-dockets" target="_blank">EPA's tips for writing effective comments <span class="cf-icon cf-icon-external-link"></span></a><br/>
+            <a href="https://www.regulations.gov/docs/Tips_For_Submitting_Effective_Comments.pdf" target="_blank">Regulation.gov's detailed tips for commenting <span class="cf-icon cf-icon-external-link"></span></a>
+          </div>
         </div>
-      </div>
 
-    </section>
+      </section>
 
-    <section class="about-this-tool">
+      <section class="about-this-tool">
 
-      <h2>About this tool</h2>
+        <h2>About this tool</h2>
 
-      <div class="about-this-tool-content">
+        <div class="about-this-tool-content">
 
-        <img class="logo" src="{% static "regulations/img/about.png" %}" alt="About this tool"/>
+          <img class="logo" src="{% static "regulations/img/about.png" %}" alt="About this tool"/>
 
-        <div class="about-this-tool-info">
-          <p>This eRegulations tool was developed by <a href="http://18f.gsa.gov" target="_blank">18F <span class="cf-icon cf-icon-external-link"></span></a> (part of the <a href="http://www.gsa.gov" target="_blank">General Services Administration <span class="cf-icon cf-icon-external-link"></span></a>) in partnership with EPA.</p>
-          <p><strong>Learn more about the eRegulations platform at <a href="http://eregs.github.io" target="_blank">eregs.github.io <span class="cf-icon cf-icon-external-link"></span></a></strong></p>
+          <div class="about-this-tool-info">
+            <p>This eRegulations tool was developed by <a href="http://18f.gsa.gov" target="_blank">18F <span class="cf-icon cf-icon-external-link"></span></a> (part of the <a href="http://www.gsa.gov" target="_blank">General Services Administration <span class="cf-icon cf-icon-external-link"></span></a>) in partnership with EPA.</p>
+            <p><strong>Learn more about the eRegulations platform at <a href="http://eregs.github.io" target="_blank">eregs.github.io <span class="cf-icon cf-icon-external-link"></span></a></strong></p>
+          </div>
+
         </div>
 
-      </div>
+        <div class="feedback">
+          <h4>We want to hear from you!</h4>
+          <p>To give feedback on this tool, <a href="https://github.com/eregs/notice-and-comment/issues/new" target="_blank">open a new issue in this repository <span class="cf-icon cf-icon-external-link"></span></a> (requires a free login).
+        </div>
 
-      <div class="feedback">
-        <h4>We want to hear from you!</h4>
-        <p>To give feedback on this tool, <a href="https://github.com/eregs/notice-and-comment/issues/new" target="_blank">open a new issue in this repository <span class="cf-icon cf-icon-external-link"></span></a> (requires a free login).
-      </div>
+      </section>
 
-    </section>
+      <section class="footer">
 
-    <section class="footer">
+        <span>Partnership between</span>
+        {% include "regulations/logo.html" %}
 
-      <span>Partnership between</span>
-      {% include "regulations/logo.html" %}
+      </section>
 
-    </section>
+    </div>
 
   </div>
 

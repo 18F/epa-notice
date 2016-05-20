@@ -27,7 +27,7 @@
       <label for="gov_agency_type" class="comment-form-fieldlabel">Government agency type</label>
       <div class="select-dropdown">
         <select id="gov_agency_type" name="gov_agency_type">
-          <option>Select an agency type</option>
+          <option value="">Select an agency type</option>
           {% for option in comment_fields.gov_agency_type.options %}
             <option value="{{option.value}}">{{option.label}}</option>
           {% endfor %}
@@ -41,7 +41,7 @@
         <input type="text" id="gov_agency_text" name="gov_agency" />
         <div class="select-dropdown" style="display: none">
           <select id="gov_agency_select" name="gov_agency" style="display: none" disabled>
-            <option>Select an agency</option>
+            <option value="">Select an agency</option>
             {% for dependency, options in comment_fields.gov_agency.options.items %}
               {% for option in options %}
                 <option value="{{option.value}}" data-dependency="{{dependency}}">{{option.label}}</option>
