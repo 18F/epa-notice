@@ -1,5 +1,6 @@
 # eRegs Notice and Comment
-[![Code Issues](https://www.quantifiedcode.com/api/v1/project/e2ee92b5c3db486f89d47371c4d89a2f/badge.svg)](https://www.quantifiedcode.com/app/project/e2ee92b5c3db486f89d47371c4d89a2f)
+[![Dependency Status](https://gemnasium.com/badges/github.com/eregs/notice-and-comment.svg)](https://gemnasium.com/github.com/eregs/notice-and-comment)
+
 
 Glue project which combines regulations-site, regulations-core and
 styles/templates for Notice and Comment. Packaged as a cloud.gov app.
