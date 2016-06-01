@@ -1,24 +1,24 @@
 # regulations-core
-django==1.8.7
+django==1.8.13
 django-haystack==2.4.1
 jsonschema==2.5.1
 -e git+https://github.com/eregs/regulations-core.git#egg=regcore
 
 # regulations-site
 # django already covered
-django-redis==4.4.1
+django-redis==4.4.3
 markdown2==2.3.1
-requests==2.8.1
-requests-toolbelt==0.6.0
+requests==2.10.0
+requests-toolbelt==0.6.2
 -e git+https://github.com/eregs/regulations-site.git#egg=regulations
 
 # cloud.gov
 celery[redis]==3.1.23
 cfenv==0.5.2
-dj-database-url==0.3.0
-django-overextends==0.4.0
-gunicorn==19.4.5
-newrelic==2.64.0.48
+dj-database-url==0.4.1
+django-overextends==0.4.1
+gunicorn==19.6.0
+newrelic==2.66.0.49
 pyelasticsearch==1.4
 psycopg2==2.6.1
-whitenoise==2.0.6
+whitenoise==3.2
