@@ -30,7 +30,8 @@ CELERY_ACKS_LATE = True
 
 CACHES['regs_gov_cache'] = {
     'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-    'LOCATION': '/tmp/regs_gov_cache',
+    # safe because: not used in prod and helpful locally
+    'LOCATION': '/tmp/regs_gov_cache',  # nosec
     'KEY_PREFIX': 'regs.gov',
     'TIMEOUT': 60 * 60 * 24,
     'OPTIONS': {
