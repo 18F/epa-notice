@@ -9,7 +9,6 @@ from .base import *  # noqa
 env = AppEnv()
 
 DEBUG = False
-TEMPLATE_DEBUG = False
 ANALYTICS = {
 }
 
