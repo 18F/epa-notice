@@ -9,10 +9,12 @@ env:
     - secure: "lzBZFKahgLeGTZ9EsGNGYcYg3uYdTQxi5wV7bc6txYs4QVDNKpMLg/YNx2s5dgiwHh7sku2j5lwzqV/9RkX0WZq0M4c/9h+i8/FttbrDRaMRHtumej3MPLm7Iu4eYbn/hLT0Nbf/1BDklGRTEweYSGKt1C/KrVDKcutUusQOgG/+2H+ywirSBLixtD0cDEFq2vuZGvPmj3yojaS6dzNSS9LPpz4txKTBqzdj428czO50QVEu4zqBWFco8piTmdgEs56aTOAj/8x1DOEJj0bBjIpL+Pw///K/Oaor0hs3ORzd7I31kg7Fg4NkriO5otDv/K4mkeZLv4nUPOfkLTpPwg+MjevEYN2UsYB2z6AqXc6nfBEqz1rpPqbkUrvhlM3zNUFK+6jLlD1v9Y+8iiRb82wxmFOqiJHuZ3aOf1HNfAwgr/SvraAVFFsImASUSucQBuel8C9HZlN4P5n7LrWYcwQMrmL/oMfuXFsWS95riKHfu4MuBOESr201pQlcNlcnTf7NSx99M6MrbQN/DioutYy/s1QHyqRUXt/qxgF3sIdMrOszhcxE4wEBYQuq5ERvU/H2q1kFjkEaDlUDVwpM5pr4vG/5Efh3xU/yJ2VsPAP9/rTMUqi/DPlj+eZoH5ZyaPxN6Fc1b1eORV/jdSGm9L3Avqnu7vv3iU9e+/YMRdw="
 install:
   - pip install -r requirements.txt
+  - pip install git+https://github.com/openstack/bandit.git
   - npm install -g grunt-cli
 script:
   - python manage.py migrate --fake-initial
   - python manage.py compile_frontend
+  - bandit -r .
 before_deploy:
   - export PATH=$HOME:$PATH
   - travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.15.0"

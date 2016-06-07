@@ -1,5 +1,9 @@
 # eRegs Notice and Comment
+[![Build Status](https://travis-ci.org/eregs/notice-and-comment.svg?branch=master)](https://travis-ci.org/eregs/notice-and-comment)
 [![Dependency Status](https://gemnasium.com/badges/github.com/eregs/notice-and-comment.svg)](https://gemnasium.com/github.com/eregs/notice-and-comment)
+[![Code Climate](https://codeclimate.com/github/eregs/notice-and-comment/badges/gpa.svg)](https://codeclimate.com/github/eregs/notice-and-comment)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/6115cfa655a041c09bff33c8a6a0bca5/badge.svg)](https://www.quantifiedcode.com/app/project/6115cfa655a041c09bff33c8a6a0bca5)
+
 
 
 Glue project which combines regulations-site, regulations-core and

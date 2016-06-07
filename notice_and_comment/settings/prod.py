@@ -9,7 +9,6 @@ from .base import *  # noqa
 env = AppEnv()
 
 DEBUG = False
-TEMPLATE_DEBUG = False
 ANALYTICS = {
 }
 
@@ -32,7 +31,10 @@ if es_config:
 
 redis = env.get_service(label='redis28-swarm')
 if redis:
-    url = redis.get_url(host='hostname', password='password', port='port')
+    # safe because: the password str is telling get_url what key to use when
+    # looking up a value
+    url = redis.get_url(    # nosec
+        host='hostname', password='password', port='port')
     BROKER_URL = 'redis://{}'.format(url)
     CACHES['regs_gov_cache']['LOCATION'] = BROKER_URL
     CACHES['regs_gov_cache']['BACKEND'] = 'django_redis.cache.RedisCache'
