@@ -9,6 +9,7 @@ services:
   - eregsnc-creds
 env:
   DJANGO_SETTINGS_MODULE: notice_and_comment.settings.prod
+  DISABLE_COLLECTSTATIC: 1
 applications:
   - name: eregs-web
   - name: eregs-worker
