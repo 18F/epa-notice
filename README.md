@@ -31,6 +31,13 @@ python manage.py migrate --fake-initial
 python manage.py compile_frontend
 ```
 
+If you know that the required npm libraries are installed and up to date, you
+can pass the --no-install flag to reduce front-end compilation time:
+
+```
+python manage.py compile_frontend --no-install
+```
+
 Then select one of the two setup options in the _Data_ section. Both options
 will give you **read** access to the tool. See the _Write Access_ section for
 more. After that, you can run a development server locally via
