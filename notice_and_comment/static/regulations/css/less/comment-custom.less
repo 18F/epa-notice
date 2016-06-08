@@ -26,25 +26,6 @@ a.comment-index-review {
   }
 }
 
-.comment-header {
-  & > a {
-    color: @black;
-    border-bottom: 2px solid @link_blue;
-  }
-}
-
-.comment-index {
-
-  li {
-    background: @gray;
-    color: @black;
-
-    &:hover {
-      background: lighten(@gray, 10%);;
-    }
-  }
-}
-
 .preamble-header {
 
   .read-proposal,
@@ -101,6 +82,35 @@ a.comment-index-review {
   }
 }
 
+#preamble-write {
+
+  .comment-wrapper {
+
+    .comment-header {
+      .comment-header-link a {
+        color: @black;
+        border-bottom: 2px solid @link_blue;
+      }
+    }
+
+    a.comment-context-toggle {
+      .comment-context-text {
+        color: @link_blue;
+      }
+    }
+  }
+}
+
+.comment-index {
+  li {
+    background: @gray;
+    color: @black;
+
+    &:hover {
+      background: lighten(@gray, 10%);;
+    }
+  }
+}
 
 #comment-review {
   .statement {
