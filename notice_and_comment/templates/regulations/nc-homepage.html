@@ -35,8 +35,6 @@
                   <div class="date">Ends {{meta.comments_close|date:"F d, Y"}}.</div>
                 {% elif meta.comment_state.value == comment_state.CLOSED %}
                   <div class="date">As of {{meta.comments_close|date:"F d, Y"}}, we are no longer accepting comments on this rule.</div>
-                {% elif meta.comment_state.value == comment_state.NO_COMMENT %}
-                  <div class="date">This notice does not accept comments.</div>
                 {% endif %}
 
             </div>
