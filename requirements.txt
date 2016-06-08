@@ -1,15 +1,19 @@
 # regulations-core
 django==1.8.13
+django-mptt==0.8.4
 django-haystack==2.4.1
 jsonschema==2.5.1
+six==1.10.0
 -e git+https://github.com/eregs/regulations-core.git#egg=regcore
 
-# regulations-site
-# django already covered
-django-redis==4.4.3
-markdown2==2.3.1
+# regulations-site (additional)
+boto3==1.3.1
+cached-property==1.3.0
+enum34==1.1.6
 requests==2.10.0
 requests-toolbelt==0.6.2
+django-redis==4.4.3
+markdown2==2.3.1
 -e git+https://github.com/eregs/regulations-site.git#egg=regulations
 
 # cloud.gov
