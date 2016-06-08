@@ -1,6 +1,7 @@
 {% extends "regulations/base.html" %}
 {% load static from staticfiles %}
 {% load macros %}
+{% load dash_to_underscore %}
 
 {% block title %}eRegulations{% endblock %}
 
@@ -41,7 +42,7 @@
             </div>
 
             <div class="agency">
-                {{meta.primary_agency}}
+                EPA
             </div>
 
             <div class="proposed-rule-title">
@@ -49,7 +50,7 @@
             </div>
 
             <div class="read-proposed-rule">
-              <a href="">Read the proposed rule and write a comment <span class="fa fa-chevron-right" aria-hidden="true"></span></a>
+                <a href="/preamble/{{ meta.document_number|dash_to_underscore }}">Read the proposed rule and write a comment <span class="fa fa-chevron-right" aria-hidden="true"></span></a>
             </div>
 
           </div>
