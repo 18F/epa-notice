@@ -47,11 +47,12 @@
               {{meta.title}}
             </div>
 
-            <div class="read-proposed-rule">
-                <a href="/preamble/{{ meta.document_number|dash_to_underscore }}">Read the proposed rule and write a comment <span class="fa fa-chevron-right" aria-hidden="true"></span></a>
-            </div>
-
           </div>
+
+          <div class="read-proposed-rule">
+            <a href="/preamble/{{ meta.document_number|dash_to_underscore }}">Read the proposed rule and write a comment <span class="fa fa-chevron-right" aria-hidden="true"></span></a>
+          </div>
+
           {% endfor %}
         </div>
 
