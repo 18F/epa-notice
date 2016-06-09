@@ -1,12 +1,17 @@
 {% comment %}
 This header override exists because we're using multiple organization logos and adding in some "partnership between" text before them.
 {% endcomment %}
+{% load dash_to_underscore %}
 
 <div class="main-head">
     <div class="title">
         <h1 class="site-title"><a href="{% url 'universal_landing' %}"><span class="e">e</span>Regulations</a></h1>
-        {% if meta.cfr_title_number %}
-        <h2 class="reg-title"><a href="{% url 'regulation_landing_view' reg_part %}">{{ meta.cfr_title_number }} CFR Part {{ reg_part }} {% if meta.reg_letter %}(Regulation {{ meta.reg_letter }}){% endif %}</a></h2>
+        {% if meta.comment_state.name != 'PREPUB' %}
+          <h2 class="reg-title">
+            <a href="{% url 'chrome_preamble' meta.document_number|dash_to_underscore %}">
+              {{ meta.fr_citation }}
+            </a>
+          </h2>
         {% endif %}
     </div> <!-- /reg-title -->
     <nav class="app-nav">
