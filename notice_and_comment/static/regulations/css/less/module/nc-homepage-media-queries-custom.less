@@ -1,0 +1,167 @@
+/*
+ Notice & Comment Homepage Media Queries
+ ==========================================================================
+ nc-homepage-media-queries-custom.less
+ styles for tablet and mobile view of landing page
+ */
+
+// tablet + mobile
+@media only screen and ( max-width: 780px ) {
+
+  .nc-homepage {
+
+    .hero-content {
+      padding: 0 30px;
+    }
+
+    section {
+      padding: 20px 30px;
+    }
+  }
+}
+
+@media only screen and ( max-width: 480px ) {
+
+  .nc-homepage {
+    h1 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    .hero {
+      background-size: cover;
+      padding-top: 0;
+    }
+
+    .hero-content {
+      padding: 30px 20px;
+
+      h3 {
+        font-size: 23px;
+        margin: 0 0 15px 0;
+      }
+    }
+
+    .proposed-rule {
+      padding: 10px;
+
+      .comments-date {
+        padding-top: 5px;
+
+        .due,
+        .date {
+          float: none;
+        }
+      }
+
+      .proposed-rule-title {
+        font-size: 19px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .read-proposed-rule {
+      padding: 7px;
+    }
+
+    .call-out {
+      margin: 0;
+    }
+
+    .call-out-content {
+      font-size: 25px;
+      line-height: 30px;
+      padding: 0 15px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .read-and-write {
+      text-align: center;
+
+      ul {
+        margin: 20px 0;
+
+        li {
+          margin: 25px;
+        }
+
+        .image {
+          margin: 30px 0;
+          width: auto;
+        }
+
+        .content {
+          margin: 0;
+        }
+      }
+
+      .other-ways {
+        margin-bottom: 40px;
+        text-align: left;
+      }
+    }
+
+    .good-comment {
+      margin: 0;
+      padding: 20px 20px 35px 20px;
+
+      h2 {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      li  {
+        .triangle {
+          top: 5px;
+        }
+
+        .triangle,
+        .triangle:before,
+        .triangle:after {
+          height: 10px;
+          width:  10px;
+        }
+
+        span {
+          margin-left: 40px;
+        }
+      }
+    }
+
+    .about-this-tool {
+      padding: 20px 20px 60px 20px;
+      text-align: center;
+
+      .about-this-tool-content {
+        display: block;
+      }
+
+      .about-this-tool-info {
+        padding-left: 0;
+      }
+    }
+
+    .footer {
+      display: block;
+      text-align: center;
+      padding: 20px 10px 10px 10px;
+
+      span {
+        line-height: 6.5em;
+        vertical-align: top;
+      }
+
+      .logo {
+        margin-top: 22px;
+      }
+    }
+  }
+}
