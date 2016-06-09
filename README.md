@@ -192,7 +192,7 @@ not already cached).
 
 ### Network Architecture
 
-TODO: Diagram
+![Diagram, described below](docs/network-architecture.svg)
 
 There are two running applications, `eregs-web`, which handles web requests,
 querying the appropriate data store, and `eregs-worker`, which generates PDFs
@@ -203,11 +203,14 @@ for sourcing asynchronous data, and S3 (`eregsnc-s3`) for storing attachments
 and processed files. We also use a "user-provided" cloud.gov service for
 storing credential information (`eregsnc-creds`).
 
+![Diagram, described below](docs/activity-diagram.svg)
+
 The user's browser communicates with `eregs-web` and `s3` (the latter via
 pre-generated urls which allow limited upload and read capabilities).
 `eregs-web` communicates indirectly with `eregs-worker` via their shared Redis
 queue. `eregs-worker` indirectly sends data to the user's browser by
 publishing it via `s3`.
+
 
 #### Service Construction
 
