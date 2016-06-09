@@ -12,6 +12,17 @@
   background: @light_gray;
 }
 
+// mobile nav list item styles
+.reg-header li {
+  margin: 0 10px;
+  padding: 10px 0;
+
+  &:last-child {
+    margin: 0;
+    padding: 10px;
+  }
+}
+
 /*
 Application Nav
 ================
@@ -78,7 +89,16 @@ Smaller Screens
     top: 56px;
   }
 
-  .app-nav-list-text {
-    display: none;
+  .app-nav-list-item {
+    padding: 20px 15px;
+
+    a {
+      color: @dark_field;
+      padding: 0;
+    }
+
+    &:last-child {
+      border-bottom: 2px solid @dark_gray;
+    }
   }
 }
