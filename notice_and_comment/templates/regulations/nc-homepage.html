@@ -29,12 +29,14 @@
             <div class="comments-date group">
 
                 {% if meta.comment_state.value == comment_state.PREPUB %}
-                  <div class="date">Comment period is not open. The comment period will open once the rule is officially published in the Federal Register.</div>
+                  <div class="due">Comment period not yet open.</div>
+                  <div class="date">Rule not yet published.</div>
                 {% elif meta.comment_state.value == comment_state.OPEN %}
                   <div class="due">Comments are due in <strong>{{meta.days_remaining}} days!</strong></div>
-                  <div class="date">Ends {{meta.comments_close|date:"F d, Y"}}.</div>
+                  <div class="date">Ends {{meta.comments_close|date:"F d, Y"}} at 11:59pm.</div>
                 {% elif meta.comment_state.value == comment_state.CLOSED %}
-                  <div class="date">As of {{meta.comments_close|date:"F d, Y"}}, we are no longer accepting comments on this rule.</div>
+                  <div class="due">Comments are due in <strong>0 days!</strong></div>
+                  <div class="date"><span class="fa fa-exclamation-triangle"></span> Ended {{meta.comments_close|date:"F d, Y"}} at 11:59pm.</div>
                 {% endif %}
 
             </div>
@@ -49,10 +51,25 @@
 
           </div>
 
-          <div class="read-proposed-rule">
-            <a href="/preamble/{{ meta.document_number|dash_to_underscore }}">Read the proposed rule and write a comment <span class="fa fa-chevron-right" aria-hidden="true"></span></a>
-          </div>
-
+          {% if meta.comment_state.value == comment_state.CLOSED %}
+            <div class="read-closed-proposed-rule">
+              <strong>The comment period is closed.</strong>
+              <a href="{% url 'chrome_preamble' meta.document_number|dash_to_underscore %}">
+                Read the proposed rule
+                <span class="fa fa-chevron-right" aria-hidden="true"></span>
+              </a>
+            </div>
+          {% else %}
+            <div class="read-proposed-rule">
+              <a href="{% url 'chrome_preamble' meta.document_number|dash_to_underscore %}">
+                Read the proposed rule
+                {% if meta.comment_state.value == comment_state.OPEN %}
+                  and write a comment
+                {% endif %}
+                <span class="fa fa-chevron-right" aria-hidden="true"></span>
+              </a>
+            </div>
+          {% endif %}
           {% endfor %}
         </div>
 

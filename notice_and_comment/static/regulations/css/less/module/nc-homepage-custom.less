@@ -69,6 +69,7 @@
 Proposed Rule Box
 ================
 */
+  @proposed_rule_padding: 25px;
   .proposed-rule {
     background-color: @white;
     border-left: 1px solid @gray;
@@ -76,7 +77,7 @@ Proposed Rule Box
     border-top: 1px solid @gray;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
-    padding: 25px;
+    padding: @proposed_rule_padding;
 
     .comments-date {
       border-bottom: 1px solid @aqua_blue_2;
@@ -91,6 +92,11 @@ Proposed Rule Box
       .date {
         font-size: 15px;
         float: right;
+
+        .fa {
+          color: @uswds_dark_red;
+          padding-right: 5px;
+        }
       }
     }
 
@@ -132,6 +138,30 @@ Proposed Rule Box
       display: block;
       height: inherit;
       width: inherit;
+    }
+  }
+
+  .read-closed-proposed-rule {
+    background-color: @light_gray;
+    color: @black;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    font-size: 17px;
+    padding: 10px @proposed_rule_padding;
+
+    strong {
+      float: left;
+    }
+
+    .fa {
+      padding-left: 5px;
+      vertical-align: middle;
+    }
+
+    a {
+      color: @blue;
+      text-align: right;
+      display: block;
     }
   }
 
