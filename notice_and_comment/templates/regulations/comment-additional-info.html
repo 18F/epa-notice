@@ -10,6 +10,7 @@
   </div>
 
   <fieldset>
+    <legend>Submitter details</legend>
 
     <div class="labeled-field" data-tab-set="commenter" data-tabs='["organization", "agency"]'>
       <label for="submitter_rep" class="comment-form-fieldlabel">Submitter's representative</label>
@@ -37,18 +38,17 @@
 
     <div class="labeled-field" data-tab-set="commenter" data-tabs="['agency']">
       <label for="gov_agency" class="comment-form-fieldlabel">Government agency name</label>
-      <div>
-        <input type="text" id="gov_agency_text" name="gov_agency" data-writein-for="gov_agency_select" />
-        <div class="select-dropdown" style="display: none" data-depends-on="gov_agency_type">
-          <select id="gov_agency_select" name="gov_agency" disabled>
-            <option value="" data-dependency="_all">Select an agency</option>
-            {% for dependency, options in comment_fields.gov_agency.options.items %}
-              {% for option in options %}
-                <option value="{{option.value}}" data-dependency="{{dependency}}">{{option.label}}</option>
-              {% endfor %}
+      <input type="text" id="gov_agency" name="gov_agency" data-writein-for="gov_agency_select" />
+      <label class="gov_agency_federal_select_label" for="gov_agency_federal_select">Select a Federal agency</label>
+      <div class="select-dropdown" style="display: none" data-depends-on="gov_agency_type">
+        <select id="gov_agency_federal_select" name="gov_agency" disabled>
+          <option value="" data-dependency="_all">Select an agency</option>
+          {% for dependency, options in comment_fields.gov_agency.options.items %}
+            {% for option in options %}
+              <option value="{{option.value}}" data-dependency="{{dependency}}">{{option.label}}</option>
             {% endfor %}
-          </select>
-        </div>
+          {% endfor %}
+        </select>
       </div>
     </div>
 
