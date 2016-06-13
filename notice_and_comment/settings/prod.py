@@ -10,6 +10,9 @@ env = AppEnv()
 
 DEBUG = False
 ANALYTICS = {
+    'DAP': {
+        'AGENCY': 'GSA'
+    }
 }
 
 DATABASES = {
