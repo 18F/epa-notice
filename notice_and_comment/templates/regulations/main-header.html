@@ -6,7 +6,7 @@ This header override exists because we're using multiple organization logos and 
 <div class="main-head">
     <div class="title">
         <h1 class="site-title"><a href="{% url 'universal_landing' %}"><span class="e">e</span>Regulations</a></h1>
-        {% if meta.comment_state.name != 'PREPUB' %}
+        {% if meta.comment_state and meta.comment_state.name != 'PREPUB' %}
           <h2 class="reg-title">
             <a href="{% url 'chrome_preamble' meta.document_number|dash_to_underscore %}">
               {{ meta.fr_citation }}
