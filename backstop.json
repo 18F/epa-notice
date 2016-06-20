@@ -1,0 +1,91 @@
+{
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 768
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "NC Homepage",
+      "url": "http://127.0.0.1:8000/",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 0,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": null,
+      "onReadyScript": null
+    },
+    {
+      "label": "NC Preamble",
+      "url": "http://127.0.0.1:8000/preamble/0000_0000/I",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 0,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": null,
+      "onReadyScript": null
+    },
+    {
+      "label": "NC Write Page",
+      "url": "http://127.0.0.1:8000/preamble/0000_0000/I",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "#content-body"
+      ],
+      "readyEvent": null,
+      "delay": 0,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": null,
+      "onReadyScript": "writeClick.js"
+    },
+    {
+      "label": "NC Review Page",
+      "url": "http://127.0.0.1:8000/preamble/0000_0000/I",
+      "hideSelectors": [],
+      "removeSelectors": [
+        ".toc-head"
+      ],
+      "selectors": [
+        "#content-body"
+      ],
+      "readyEvent": null,
+      "delay": 0,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": null,
+      "onReadyScript": "writeClickReview.js"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "../../backstop_data/bitmaps_reference",
+    "bitmaps_test": "../../backstop_data/bitmaps_test",
+    "compare_data": "../../backstop_data/bitmaps_test/compare.json",
+    "casper_scripts": "../../backstop_scripts"
+  },
+  "engine": "phantomjs",
+  "report": ["CLI", "browser"],
+  "cliExitOnFail": false,
+  "casperFlags": [],
+  "debug": false,
+  "port": 3001
+}
