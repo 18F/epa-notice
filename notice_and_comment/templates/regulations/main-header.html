@@ -1,7 +1,8 @@
 {% comment %}
-This header override exists because we're using multiple organization logos and adding in some "partnership between" text before them.
+This header override exists because we're using multiple organization logos and adding in "partnership between" text, which uses a different list layout than in a typical agency eregs format.
 {% endcomment %}
 {% load dash_to_underscore %}
+{% load staticfiles %}
 
 <div class="main-head">
     <div class="title">
@@ -20,10 +21,27 @@ This header override exists because we're using multiple organization logos and 
              <span class="icon-text">Mobile navigation</span>
         </a>
         <ul class="app-nav-list">
-            <li class="app-nav-list-item"><span class="app-nav-list-text">Partnership between:</span></li>
-            <li class="app-nav-list-item"><span class="app-nav-list-text"><a href="http://www.epa.gov">epa.gov <span class="cf-icon cf-icon-external-link"></span></a></span></li>
-            <li class="app-nav-list-item"><span class="app-nav-list-text"><a href="http://18f.gsa.gov">18f.gsa.gov <span class="cf-icon cf-icon-external-link"></span></a></span></li>
-            <li class="app-nav-list-item"><span class="app-nav-list-text"><a href="http://www.gsa.gov">gsa.gov <span class="cf-icon cf-icon-external-link"></span></a></span></li>
+            <li class="app-nav-list-item">
+              <span class="app-nav-list-text">Partnership between</span>
+            </li>
+            <li class="app-nav-list-item logo-list-item">
+              <a href="https://epa.gov" title="EPA Home">
+                  <img class="logo" src="{% static "regulations/img/logo-epa.png" %}" alt="Environmental Protection Agency"/>
+              </a>
+            </li>
+            <li class="app-nav-list-item logo-list-item">
+              <a href="https://18f.gsa.gov" title="18F Home">
+                  <img class="logo" src="{% static "regulations/img/logo-18f.png" %}" alt="18F"/>
+              </a>
+            </li>
+            <li class="app-nav-list-item logo-list-item">
+              <a href="https://gsa.gov" title="GSA Home">
+                  <img class="logo" src="{% static "regulations/img/logo-gsa.png" %}" alt="General Services Administration"/>
+              </a>
+            </li>
+            <li class="app-nav-list-item nav-item-mobile"><span class="app-nav-list-text"><a href="http://www.epa.gov">epa.gov <span class="cf-icon cf-icon-external-link"></span></a></span></li>
+            <li class="app-nav-list-item nav-item-mobile"><span class="app-nav-list-text"><a href="http://18f.gsa.gov">18f.gsa.gov <span class="cf-icon cf-icon-external-link"></span></a></span></li>
+            <li class="app-nav-list-item nav-item-mobile"><span class="app-nav-list-text"><a href="http://www.gsa.gov">gsa.gov <span class="cf-icon cf-icon-external-link"></span></a></span></li>
         </ul>
     </nav>
 </div>
