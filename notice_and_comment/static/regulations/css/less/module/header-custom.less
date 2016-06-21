@@ -47,21 +47,6 @@ Site Title
   }
 }
 
-// mobile nav list items
-.app-nav-list {
-  display: none;
-
-  li {
-    margin: 0 10px;
-    padding: 10px 0;
-
-    &:last-child {
-      margin: 0;
-      padding: 10px;
-    }
-  }
-}
-
 .app-nav-list-text {
   font-size: 0.8em;
 }
@@ -71,11 +56,19 @@ Big Screens
 */
 @media only screen and ( min-width: 880px ) {
 
+  .app-nav-list {
+    .nav-item-mobile {
+      display: none;
+    }
+  }
+
   .app-nav-list.open {
     display: block;
   }
 
   .app-nav-list-item {
+    line-height: 50px;
+
     .logo {
       margin: 8px 0 0 8px;
     }
@@ -94,6 +87,15 @@ Smaller Screens
     height: 53px;
   }
 
+  .app-nav-list {
+    .logo-list-item {
+      display: none;
+    }
+    .nav-item-mobile {
+      display: block;
+    }
+  }
+
   .app-nav-list.open {
     top: 56px;
   }
@@ -110,4 +112,5 @@ Smaller Screens
       border-bottom: 2px solid @dark_gray;
     }
   }
+
 }
