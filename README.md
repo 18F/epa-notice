@@ -306,3 +306,35 @@ building and pushing.
 ### Non-Cloud.gov
 TODO; see `manifest` files, the cloud.gov documentation and
 https://atf-eregs.readthedocs.io/en/latest/production_setup.html#non-cloud-gov
+
+### Visual regression tests
+Visual regression tests can be run via BackstopJS.
+If not already installed, install BackstopJS via npm:
+```
+npm install backstopjs
+```
+There is already a `backstop.json` configuration file in the root of this repo that
+defines various scenarios for screenshots reference and testing. There is
+also a `backstop_scripts` directory that holds CasperJS scripts to define
+dynamic action states like writing and review comments that can't be directly accessed
+via a unique URL.
+
+Before visual regression testing can begin, reference screenshots need to be captured.
+Running this command:
+```
+npm run reference
+```
+will capture screenshots of all defined scenarios in the `backstop.json` file.
+Once the reference set is captured, then tests can be ran.
+
+Tests must be run in the `node_modules/backstop_data/` directory with this command:
+```
+npm run test
+```
+Timestamped directories of tests will be created in `node_modules/backstop_data/bitmaps_test/`
+folder. After the tests run, the browser will open a BackstopJS report but may not show
+any passing or failing tests. Upon command line prompt you might have to additionally run:
+```
+npm run openReport
+```
+for the visual diffs to show up in the BackstopJS browser report.
