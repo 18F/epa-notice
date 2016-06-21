@@ -23,7 +23,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        "body"
+        ".nc-homepage"
       ],
       "readyEvent": null,
       "delay": 0,
