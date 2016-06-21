@@ -326,6 +326,12 @@ A reference set can be captured by this command in the `node_modules/backstop_da
 npm run reference
 ```
 After the reference set capture is finished, then tests can be run against the reference set.
+Currently in `backstop.json` there are reference capture scenarios for:
+- N&C Homepage
+- Preamble Section I
+- Write mode on Section I
+- Review your full comment with a blank Section I comment
+in screen sizes for phone, tablet and desktop.
 
 #### Running tests
 Tests must be run in the `node_modules/backstop_data/` directory with this command:
