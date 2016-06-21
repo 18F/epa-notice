@@ -331,6 +331,7 @@ Currently in `backstop.json` there are reference capture scenarios for:
 - Preamble Section I
 - Write mode on Section I
 - Review your full comment with a blank Section I comment
+
 in screen sizes for phone, tablet and desktop.
 
 #### Running tests
