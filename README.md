@@ -306,3 +306,48 @@ building and pushing.
 ### Non-Cloud.gov
 TODO; see `manifest` files, the cloud.gov documentation and
 https://atf-eregs.readthedocs.io/en/latest/production_setup.html#non-cloud-gov
+
+### Visual regression tests
+Visual regression tests can be run via BackstopJS.
+If not already installed, install BackstopJS via npm:
+```
+npm install backstopjs
+```
+There is already a `backstop.json` configuration file in the root of this repo that
+defines various scenarios for screenshots reference and testing. There is
+also a `backstop_scripts` directory that holds CasperJS scripts to define
+dynamic action states like writing and review comments that can't be directly accessed
+via a unique URL.
+
+#### Reference set capture
+Before visual regression testing can begin, reference screenshots need to be captured.
+A reference set can be captured by this command in the `node_modules/backstop_data/` directory:
+```
+npm run reference
+```
+After the reference set capture is finished, then tests can be run against the reference set.
+Currently in `backstop.json` there are reference capture scenarios for:
+- N&C Homepage
+- Preamble Section I
+- Write mode on Section I
+- Review your full comment with a blank Section I comment
+
+in screen sizes for phone, tablet and desktop.
+
+#### Running tests
+Tests must be run in the `node_modules/backstop_data/` directory with this command:
+```
+npm run test
+```
+
+#### Viewing the report
+Timestamped directories of tests will be created in `node_modules/backstop_data/bitmaps_test/`
+folder. After the tests run, the browser will open a BackstopJS report but may not show
+any passing or failing tests. Upon command line prompt you might have to additionally run:
+```
+npm run openReport
+```
+for the visual diffs to show up in the BackstopJS browser report.
+
+#### More documentation
+More detailed documentation about BackstopJS can be found on the [github repo](https://github.com/garris/BackstopJS) or the [css-tricks tutorial](https://css-tricks.com/automating-css-regression-testing/).
