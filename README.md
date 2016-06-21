@@ -321,7 +321,7 @@ via a unique URL.
 
 #### Reference set capture
 Before visual regression testing can begin, reference screenshots need to be captured.
-A reference set can be captured by this command:
+A reference set can be captured by this command in the `node_modules/backstop_data/` directory:
 ```
 npm run reference
 ```
