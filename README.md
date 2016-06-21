@@ -338,3 +338,5 @@ any passing or failing tests. Upon command line prompt you might have to additio
 npm run openReport
 ```
 for the visual diffs to show up in the BackstopJS browser report.
+
+More detailed documentation about BackstopJS can be found on the [github repo](https://github.com/garris/BackstopJS) or the [css-tricks tutorial](https://css-tricks.com/automating-css-regression-testing/).
