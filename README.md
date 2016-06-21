@@ -319,18 +319,21 @@ also a `backstop_scripts` directory that holds CasperJS scripts to define
 dynamic action states like writing and review comments that can't be directly accessed
 via a unique URL.
 
+#### Reference set capture
 Before visual regression testing can begin, reference screenshots need to be captured.
-Running this command:
+A reference set can be captured by this command:
 ```
 npm run reference
 ```
-will capture screenshots of all defined scenarios in the `backstop.json` file.
-Once the reference set is captured, then tests can be ran.
+After the reference set capture is finished, then tests can be run against the reference set.
 
+#### Running tests
 Tests must be run in the `node_modules/backstop_data/` directory with this command:
 ```
 npm run test
 ```
+
+#### Viewing the report
 Timestamped directories of tests will be created in `node_modules/backstop_data/bitmaps_test/`
 folder. After the tests run, the browser will open a BackstopJS report but may not show
 any passing or failing tests. Upon command line prompt you might have to additionally run:
@@ -339,4 +342,5 @@ npm run openReport
 ```
 for the visual diffs to show up in the BackstopJS browser report.
 
+#### More documentation
 More detailed documentation about BackstopJS can be found on the [github repo](https://github.com/garris/BackstopJS) or the [css-tricks tutorial](https://css-tricks.com/automating-css-regression-testing/).
