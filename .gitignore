@@ -71,3 +71,7 @@ src/
 
 # wkhtmltox
 wkhtmltox*
+
+# backstop visual regression test data
+node_modules
+backstop_data
