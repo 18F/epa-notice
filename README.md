@@ -321,13 +321,13 @@ via a unique URL.
 
 #### Reference set capture
 Before visual regression testing can begin, reference screenshots need to be captured.
-A reference set can be captured by this command in the `node_modules/backstop_data/` directory:
+A reference set can be captured by this command in the `node_modules/backstopjs/` directory:
 ```
 npm run reference
 ```
 After the reference set capture is finished, then tests can be run against the reference set.
 Currently in `backstop.json` there are reference capture scenarios for:
-- N&C Homepage
+- N&amp;C Homepage
 - Preamble Section I
 - Write mode on Section I
 - Review your full comment with a blank Section I comment
@@ -335,13 +335,13 @@ Currently in `backstop.json` there are reference capture scenarios for:
 in screen sizes for phone, tablet and desktop.
 
 #### Running tests
-Tests must be run in the `node_modules/backstop_data/` directory with this command:
+Tests must be run in the `node_modules/backstopjs/` directory with this command:
 ```
 npm run test
 ```
 
 #### Viewing the report
-Timestamped directories of tests will be created in `node_modules/backstop_data/bitmaps_test/`
+Timestamped directories of tests will be created in `notice-and-comment/backstop_data/bitmaps_test/`
 folder. After the tests run, the browser will open a BackstopJS report but may not show
 any passing or failing tests. Upon command line prompt you might have to additionally run:
 ```
