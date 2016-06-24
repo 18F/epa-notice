@@ -1,7 +1,9 @@
 ---
 inherit: manifest_base.yml
 domain: epa-notice.usa.gov
-host: ""
+hosts:
+  - ""
+  - "www"
 no-hostname: true
 env:
   DOCUMENT_ID: EPA-HQ-OA-2016-0002-0001
