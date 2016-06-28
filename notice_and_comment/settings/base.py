@@ -156,5 +156,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
-    'notice_and_comment.basic_auth.BasicAuthMiddleware'
 )
+
+if os.getenv('WHOLE_SITE_AUTH'):
+    MIDDLEWARE_CLASSES += (
+        'notice_and_comment.basic_auth.BasicAuthMiddleware',
+    )

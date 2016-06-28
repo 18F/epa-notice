@@ -303,11 +303,18 @@ what you have locally and regardless of what you’ve built the front-end
 against. Be sure to always update your local libraries (via pip) before
 building and pushing.
 
+### Read Authentication
+
+The environment variable, `WHOLE_SITE_AUTH`, will throw up a BASIC auth wall
+across the _entire_ site using Django middleware. For simplicity, this will
+reuse the existing `HTTP_AUTH_USER` and `HTTP_AUTH_PASSWORD` used by the write
+API.
+
 ### Non-Cloud.gov
 TODO; see `manifest` files, the cloud.gov documentation and
 https://atf-eregs.readthedocs.io/en/latest/production_setup.html#non-cloud-gov
 
-### Visual regression tests
+## Visual regression tests
 Visual regression tests can be run via BackstopJS.
 If not already installed, install BackstopJS via npm:
 ```
