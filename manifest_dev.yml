@@ -4,4 +4,3 @@ host: eregsnc-demo
 env:
   DOCUMENT_ID: EPA-HQ-OA-2016-0002-0001
   NEW_RELIC_APP_NAME: notice-comment-dev
-  WHOLE_SITE_AUTH: true
