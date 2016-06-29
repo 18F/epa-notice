@@ -63,3 +63,9 @@ if HTTP_AUTH_USER and HTTP_AUTH_PASSWORD:
     API_BASE = 'http://{}:{}@localhost:{}/api/'.format(
         HTTP_AUTH_USER, HTTP_AUTH_PASSWORD,
         os.environ.get('VCAP_APP_PORT', '8000'))
+
+# Cookie settings - we don't inspect the contents of cookies, but this is good
+# practice
+SESSION_COOKIE_HTTPONLY = True  # note that this is also Django's default
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
