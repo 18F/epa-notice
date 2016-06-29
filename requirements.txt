@@ -26,3 +26,6 @@ newrelic==2.66.0.49
 pyelasticsearch==1.4
 psycopg2==2.6.1
 whitenoise==3.2
+
+# regulations-parser extensions
+-e eregs_extensions/
