@@ -1,0 +1,26 @@
+schema_version: "2.0"
+name: eManifest Application
+documentation_complete: false
+references:
+  - name: Activity Diagram
+    path: docs/activity-diagram.png
+    type: Image
+  - name: Library Diagram
+    path: docs/library-architecture.png
+    type: Image
+  - name: Network Diagram
+    path: docs/network-architecture.png
+    type: Image
+  - name: Updating Data Diagram
+    path: docs/updating-data.png
+    type: Image
+satisfies:
+  - standard_key: NIST-800-53
+    control_key: AC-2   # Account Management
+    narrative: >
+      For most intents and purposes, we do not create or manage user accounts.
+      The user's browser stores state locally via LocalStorage. Users may
+      upload attachments, which are stored in S3 with a random identifier;
+      only the user's browser knows how to connect a specific user with their
+      data. Users submit a single bundle of comments, which triggers the
+      LocalStorage to be cleared.
