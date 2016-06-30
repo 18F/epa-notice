@@ -1,19 +1,6 @@
 schema_version: "2.0"
 name: eManifest Application
 documentation_complete: false
-references:
-  - name: Activity Diagram
-    path: docs/activity-diagram.png
-    type: Image
-  - name: Library Diagram
-    path: docs/library-architecture.png
-    type: Image
-  - name: Network Diagram
-    path: docs/network-architecture.png
-    type: Image
-  - name: Updating Data Diagram
-    path: docs/updating-data.png
-    type: Image
 satisfies:
   - standard_key: NIST-800-53
     control_key: AC-2   # Account Management
@@ -24,3 +11,19 @@ satisfies:
       only the user's browser knows how to connect a specific user with their
       data. Users submit a single bundle of comments, which triggers the
       LocalStorage to be cleared.
+  - standard_key: NIST-800-53
+    control_key: AC-3   # Access Enforcement
+    narrative: >
+      Aside from public-facing access, there is a HTTP BASIC AUTH-protected
+      data-writing interface. Combined, the username and password are 32
+      randomly generated hex characters. For more details, see
+      https://github.com/eregs/notice-and-comment#updating-data
+  - standard_key: NIST-800-53
+    control_key: AC-6   # Least Privilege
+    narrative: >
+      Users are only permitted access to their own data. While the user is
+      adding comments, data is stored in their local browser alone. Uploaded
+      files and generated pdfs are accessible via S3 URLs with appropriate
+      signatures (with a timeout of one hour) -- for more information, see
+      http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html
+      . Aside from S3, once data is submitted, it is not retrievable.
