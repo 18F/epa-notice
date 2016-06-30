@@ -1,7 +1,7 @@
 /*
  Notice & Comment Homepage styles
  ==========================================================================
- nc-homepage-custom.less styles for landing page
+ nc-homepage-custom.scss styles for landing page
  */
 
 .nc-homepage-header {
@@ -9,24 +9,24 @@
   position: relative;
 
   .main-head {
-    .sans-font-regular;
+    @include sans-font-regular;
     position: relative;
     z-index: 1;
   }
 }
 
-@section_padding: 100px;
+$section_padding: 100px;
 
 .nc-homepage {
-  background-color: @white;
-  .sans-font-regular;
+  background-color: $white;
+  @include sans-font-regular;
   // positioning hack to avoid 1px top white border
   left: 0;
   position: absolute;
   right: 0;
 
   .hero-background {
-    background-color: @aqua_blue;
+    background-color: $aqua_blue;
     background-image: url(../../regulations/img/homepage-hero.jpg);
     background-position: top center;
     background-repeat: no-repeat;
@@ -37,14 +37,14 @@
   }
 
   h1 {
-    .sans-font-light;
+    @include sans-font-light;
     font-size: 44px;
     line-height: 48px;
     margin-top: 0;
   }
 
   h2 {
-    .sans-font-light;
+    @include sans-font-light;
     font-size: 40px;
     line-height: 45px;
   }
@@ -63,7 +63,7 @@
     margin: auto;
 
     h2 {
-      .sans-font-bold;
+      @include sans-font-bold;
       font-size: 34px;
       margin: 35px 0 25px 0;
     }
@@ -73,18 +73,18 @@
 Proposed Rule Box
 ================
 */
-  @proposed_rule_padding: 25px;
+  $proposed_rule_padding: 25px;
   .proposed-rule {
-    background-color: @white;
-    border-left: 1px solid @gray;
-    border-right: 1px solid @gray;
-    border-top: 1px solid @gray;
+    background-color: $white;
+    border-left: 1px solid $gray;
+    border-right: 1px solid $gray;
+    border-top: 1px solid $gray;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
-    padding: @proposed_rule_padding;
+    padding: $proposed_rule_padding;
 
     .comments-date {
-      border-bottom: 1px solid @aqua_blue_2;
+      border-bottom: 1px solid $aqua_blue_2;
       font-size: 18px;
       margin-bottom: 20px;
       padding-bottom: 20px;
@@ -98,15 +98,15 @@ Proposed Rule Box
         float: right;
 
         .fa {
-          color: @uswds_dark_red;
+          color: $uswds_dark_red;
           padding-right: 5px;
         }
       }
     }
 
     .agency {
-      color: @dark_blue;
-      .sans-font-bold;
+      color: $dark_blue;
+      @include sans-font-bold;
       display: inline-block;
       line-height: 45px;
       font-size: 40px;
@@ -116,7 +116,7 @@ Proposed Rule Box
 
     .proposed-rule-title {
       display: inline-block;
-      .sans-font-light;
+      @include sans-font-light;
       font-weight: 500;
       font-size: 24px;
       max-width: 600px;
@@ -125,10 +125,10 @@ Proposed Rule Box
   }
 
   .read-proposed-rule {
-    background-color: @dark_blue;
+    background-color: $dark_blue;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-    color: @light_gray;
+    color: $light_gray;
     font-size: 17px;
     padding: 7px 7px 7px 125px;
 
@@ -138,7 +138,7 @@ Proposed Rule Box
     }
 
     a {
-      color: @white;
+      color: $white;
       display: block;
       height: inherit;
       width: inherit;
@@ -146,12 +146,12 @@ Proposed Rule Box
   }
 
   .read-closed-proposed-rule {
-    background-color: @light_gray;
-    color: @black;
+    background-color: $light_gray;
+    color: $black;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     font-size: 17px;
-    padding: 10px @proposed_rule_padding;
+    padding: 10px $proposed_rule_padding;
 
     strong {
       float: left;
@@ -163,7 +163,7 @@ Proposed Rule Box
     }
 
     a {
-      color: @blue;
+      color: $blue;
       text-align: right;
       display: block;
     }
@@ -174,14 +174,14 @@ Call Out Comment after Hero
 ================
 */
   .call-out {
-    background-color: @light_gray;
+    background-color: $light_gray;
     margin-top: 60px;
     padding: 30px 0;
     text-align: center;
   }
 
   .call-out-content {
-    .sans-font-light;
+    @include sans-font-light;
     font-size: 34px;
     line-height: 38px;
     margin: auto;
@@ -197,8 +197,8 @@ General section styles
 ================
 */
   section {
-    padding-bottom: @section_padding;
-    padding-top: @section_padding;
+    padding-bottom: $section_padding;
+    padding-top: $section_padding;
   }
 
   .read-and-write,
@@ -245,12 +245,12 @@ Read and write with ease
     }
 
     .other-ways {
-      .sans-font-bold;
+      @include sans-font-bold;
       max-width: 650px;
 
       .button {
         align-items: center;
-        background-color: @light_gray;
+        background-color: $light_gray;
         cursor: pointer;
         display: -webkit-flex;
         display: flex;
@@ -270,7 +270,7 @@ Read and write with ease
       }
 
       .collapsible {
-        .sans-font-regular;
+        @include sans-font-regular;
         margin: 25px 15px;
 
         ul {
@@ -294,7 +294,7 @@ Build a good comment
 ================
 */
   .good-comment {
-    background-color: @light_gray;
+    background-color: $light_gray;
 
     h2 {
       margin-bottom: 1.2em;
@@ -310,7 +310,7 @@ Build a good comment
       position: relative;
 
       .triangle {
-        background-color: @orange;
+        background-color: $orange;
         margin-right: 40px;
         position: absolute;
         text-align: left;
@@ -349,7 +349,7 @@ Build a good comment
 
     .more-tips {
       display: inline-block;
-      .sans-font-bold;
+      @include sans-font-bold;
       vertical-align: top;
       width: 170px;
     }
@@ -386,8 +386,8 @@ About this tool
     }
 
     .feedback {
-      background-color: @light_orange;
-      .sans-font-bold;
+      background-color: $light_orange;
+      @include sans-font-bold;
       padding: 15px 25px;
     }
 
@@ -406,7 +406,7 @@ Footer partnership logos
 ================
 */
   .footer {
-    border-top: 2px solid @blue;
+    border-top: 2px solid $blue;
     display: -webkit-flex;
     display: flex;
     padding: 20px 13px;

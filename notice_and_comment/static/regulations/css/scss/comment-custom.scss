@@ -2,7 +2,7 @@
 
   .read-proposal,
   .write-comment {
-    .sans-font-bold;
+    @include sans-font-bold;
     width: 225px;
     transition: 0.1s;
   }
