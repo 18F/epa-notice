@@ -5,25 +5,33 @@ satisfies:
   - standard_key: NIST-800-53
     control_key: AC-2   # Account Management
     narrative: >
-      For most intents and purposes, we do not create or manage user accounts.
-      The user's browser stores state locally via LocalStorage. Users may
-      upload attachments, which are stored in S3 with a random identifier;
-      only the user's browser knows how to connect a specific user with their
-      data. Users submit a single bundle of comments, which triggers the
-      LocalStorage to be cleared.
+      Within our application (see cloud.gov for lower-level controls), user
+      accounts are not created or managed. The user's browser stores state
+      locally via LocalStorage. Users may upload attachments, which are stored
+      in S3 with a random identifier; only the user's browser knows how to
+      connect a specific user with their data. Users submit a single bundle of
+      comments, which triggers the LocalStorage to be cleared.
   - standard_key: NIST-800-53
     control_key: AC-3   # Access Enforcement
     narrative: >
-      Aside from public-facing access, there is a HTTP BASIC AUTH-protected
-      data-writing interface. Combined, the username and password are 32
-      randomly generated hex characters. For more details, see
-      https://github.com/eregs/notice-and-comment#updating-data
+      At the application level (see cloud.gov for lower-level controls),
+      access restrictions are largely enforced by HTTP BASIC AUTH credentials.
+      These are necessary to write regulatory data to the system or to access
+      any pages when in a staging environment. Combined, the user name and
+      password are 32 randomly generated hexadecimal characters. For more
+      details, see https://github.com/eregs/notice-and-comment#updating-data.
+      The ability to write (and submit) comments is further restricted by a
+      date check (commenting is only available within a specific time frame),
+      though there is little harm in accepting comments outside of this
+      window.
   - standard_key: NIST-800-53
     control_key: AC-6   # Least Privilege
     narrative: >
-      Users are only permitted access to their own data. While the user is
-      adding comments, data is stored in their local browser alone. Uploaded
-      files and generated pdfs are accessible via S3 URLs with appropriate
-      signatures (with a timeout of one hour) -- for more information, see
-      http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html
-      . Aside from S3, once data is submitted, it is not retrievable.
+      At the application level (see cloud.gov for lower-level controls), users
+      are only permitted access to their own data. While the user is adding
+      comments, data is stored in their local browser. Uploaded files and
+      generated pdfs *are* accessible via S3 URLs, but require correct
+      signatures and must be used within an hour of issuance. For more
+      information, see
+      http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html.
+      Aside from S3, once data is submitted, it is not retrievable.
