@@ -23,7 +23,5 @@ dependencies:
     # Cloud.gov
     - url: github.com/18F/cg-compliance
       revision: master
-  systems:
-    # data
   standards:
     # data
