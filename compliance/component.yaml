@@ -41,16 +41,19 @@ satisfies:
   control_key: AC-3   # Access Enforcement
   narrative:
     text: >
-      At the application level (see cloud.gov for lower-level controls),
-      access restrictions are largely enforced by HTTP BASIC AUTH credentials.
-      These are necessary to write regulatory data to the system or to access
-      any pages when in a staging environment. Combined, the user name and
-      password are 64 randomly generated hexadecimal characters. For more
-      details, see https://github.com/eregs/notice-and-comment#updating-data.
-      The ability to write (and submit) comments is further restricted by a
-      date check (commenting is only available within a specific time frame),
-      though there is little harm in accepting comments outside of this
-      window.
+      Most of the application's functionality, including "read" access to
+      regulatory data and "write" access to create comments is meant to be
+      accessed by the general public. That said, we do have certain
+      restrictions on user abilities.  At the application level (see cloud.gov
+      for lower-level controls), access restrictions are largely enforced by
+      HTTP BASIC AUTH credentials.  These are necessary to write regulatory
+      data to the system or to access any pages when in a staging environment.
+      Combined, the user name and password are 64 randomly generated
+      hexadecimal characters. For more details, see
+      https://github.com/eregs/notice-and-comment#updating-data.  The ability
+      to write (and submit) comments is further restricted by a date check
+      (commenting is only available within a specific time frame), though
+      there is little harm in accepting comments outside of this window.
 - standard_key: NIST-800-53
   control_key: AC-6   # Least Privilege
   narrative:
@@ -105,9 +108,9 @@ satisfies:
       (though this is partially automated). Proposed changes have appropriate
       justification (describing problems resolved or referencing further
       details in an issue tracker) in either their commit history or as part
-      of the Github Pull Request.  Proposed changes which fail automated tests
-      are generally not merged.  Only the tested, "master" branch code is
-      deployed, though it is deployed on an ad-hoc basis.
+      of the Github Pull Request. Proposed changes which fail automated tests
+      are generally not merged. Only the tested, "master" branch code is
+      deployed, on an ad-hoc basis.
     references:
       - verification: github
       - verification: travis
@@ -177,16 +180,17 @@ satisfies:
   narrative:
     text: >
       In addition to cloud.gov controls, the application layer is scanned with
-      both static and dynamic tooling. Before being merged into "master" all
-      custom code has "flake8" (a linting tool to catch syntactic errors),
-      "bandit" (a security-focused static analysis tool), and a handful of
-      custom, security-centric unit tests ran. Code which does not meet these
-      standards is generally not merged. We also employ Gemnasium to track our
-      dependencies, Code Climate to warn of potentially concerning style, and
-      Quantified Code to warn about security and style issues.
+      both static and dynamic tooling.  Before being merged into "master", all
+      custom code is automatically analyzed by "flake8" (a linting tool to
+      catch syntactic errors), "bandit" (a security-focused static analysis
+      tool), and a handful of custom, security-centric unit tests. Code which
+      does not meet these standards is generally not merged. We also employ
+      Gemnasium to track our dependencies, Code Climate to warn of potentially
+      concerning style, and Quantified Code to warn about security and style
+      issues.
 
-      For static analysis, we've ran OWASP ZAP and Nessus against the
-      application and addressed all critical issues.
+      For static analysis, we've addressed all critical issues raised by
+      evaluating the application with OWASP ZAP and Nessus.
     references:
       - verification: flake8
       - verification: bandit
