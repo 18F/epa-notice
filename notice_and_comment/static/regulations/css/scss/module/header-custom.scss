@@ -22,7 +22,7 @@ Site Title
 /*
 Big Screens
 */
-@media only screen and ( min-width: 880px ) {
+@media only screen and (min-width: 880px) {
 
   .app-nav-list {
     .nav-item-mobile {
@@ -41,6 +41,7 @@ Big Screens
       margin: 8px 0 0 8px;
     }
   }
+
   .logo-list-item {
     margin: 0 0 0 5px;
   }
@@ -59,6 +60,7 @@ Smaller Screens
     .logo-list-item {
       display: none;
     }
+
     .nav-item-mobile {
       display: block;
     }

@@ -27,7 +27,7 @@ $section_padding: 100px;
 
   .hero-background {
     background-color: $aqua_blue;
-    background-image: url(../../regulations/img/homepage-hero.jpg);
+    background-image: url('../../regulations/img/homepage-hero.jpg');
     background-position: top center;
     background-repeat: no-repeat;
     left: 0;
@@ -74,6 +74,7 @@ Proposed Rule Box
 ================
 */
   $proposed_rule_padding: 25px;
+
   .proposed-rule {
     background-color: $white;
     border-left: 1px solid $gray;
@@ -353,6 +354,7 @@ Build a good comment
       vertical-align: top;
       width: 170px;
     }
+
     .more-tips-links {
       display: inline-block;
       max-width: 450px;

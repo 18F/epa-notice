@@ -4,12 +4,12 @@
  For stylesheets specific to Notice & Comment
  */
 
-@import "../comment-custom.scss";
-@import "../layout-custom.scss";
+@import '../comment-custom';
+@import '../layout-custom';
 
 // Custom Modules
 
-@import "header-custom.scss";
-@import "note-custom.scss";
-@import "nc-homepage-custom.scss";
-@import "nc-homepage-media-queries-custom.scss";
+@import 'header-custom';
+@import 'note-custom';
+@import 'nc-homepage-custom';
+@import 'nc-homepage-media-queries-custom';
