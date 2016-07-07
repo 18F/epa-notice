@@ -6,8 +6,7 @@
  */
 
 // tablet + mobile
-@media only screen and ( max-width: 780px ) {
-
+@media only screen and (max-width: 780px) {
   .nc-homepage {
 
     .hero-content {
@@ -20,8 +19,7 @@
   }
 }
 
-@media only screen and ( max-width: 480px ) {
-
+@media only screen and (max-width: 480px) {
   .nc-homepage {
     h1 {
       font-size: 32px;
@@ -118,7 +116,7 @@
         text-align: center;
       }
 
-      li  {
+      li {
         .triangle {
           top: 5px;
         }
@@ -127,7 +125,7 @@
         .triangle:before,
         .triangle:after {
           height: 10px;
-          width:  10px;
+          width: 10px;
         }
 
         span {

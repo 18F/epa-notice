@@ -37,14 +37,13 @@
 }
 
 .footnote-jump-link {
-
   &:link {
     outline: none;
   }
 
   &:before {
     // get footnote jump back links to position past fixed header
-    content: "";
+    content: '';
     display: inline-block;
     height: 100px;
     margin: -100px 0 0;
