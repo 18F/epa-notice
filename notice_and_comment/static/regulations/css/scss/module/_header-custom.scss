@@ -1,6 +1,4 @@
-/* ==========================================================================
- reg header
- ========================================================================== */
+// reg header
 
 .main-head {
   height: 3.5em;
@@ -10,20 +8,13 @@
   top: 3.5em;
 }
 
-/*
-Site Title
-================
-*/
-
+// Site Title
 .app-nav-list-text {
   font-size: 0.8em;
 }
 
-/*
-Big Screens
-*/
+// Big Screens
 @media only screen and (min-width: 880px) {
-
   .app-nav-list {
     .nav-item-mobile {
       display: none;
@@ -47,10 +38,7 @@ Big Screens
   }
 }
 
-/*
-Smaller Screens
-*/
-
+// Smaller Screens
 @media only screen and (max-width: 879px) {
   .mobile-nav-trigger {
     height: 53px;
@@ -73,5 +61,4 @@ Smaller Screens
   .app-nav-list-item {
     padding: 20px 15px;
   }
-
 }
