@@ -35,7 +35,7 @@ testable: true
 licenses:
   notice-and-comment:
     name: CC0-1.0
-    url: https://github.com/eregs/notice-and-comment/blob/master/LICENSE.md
+    url: https://github.com/18F/epa-notice/blob/master/LICENSE.md
 
 # Who is the partner for your project? (Use the full name of the partner
 # documented here:
@@ -49,7 +49,7 @@ partners:
 # - url: URL for the link
 #   text: Anchor text for the link
 contact:
-- url: https://github.com/eregs/notice-and-comment/issues
+- url: https://github.com/18F/epa-notice/issues
   text: GitHub issues
 
 # Who are the team members on your project? You can specify GitHub usernames,

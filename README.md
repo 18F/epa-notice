@@ -1,8 +1,8 @@
 # EPA eManifest/eRegs Notice and Comment Pilot
-[![Build Status](https://travis-ci.org/eregs/notice-and-comment.svg?branch=master)](https://travis-ci.org/eregs/notice-and-comment)
-[![Dependency Status](https://gemnasium.com/badges/github.com/eregs/notice-and-comment.svg)](https://gemnasium.com/github.com/eregs/notice-and-comment)
-[![Code Climate](https://codeclimate.com/github/eregs/notice-and-comment/badges/gpa.svg)](https://codeclimate.com/github/eregs/notice-and-comment)
-[![Code Issues](https://www.quantifiedcode.com/api/v1/project/6115cfa655a041c09bff33c8a6a0bca5/badge.svg)](https://www.quantifiedcode.com/app/project/6115cfa655a041c09bff33c8a6a0bca5)
+[![Build Status](https://travis-ci.org/18F/epa-notice.svg?branch=master)](https://travis-ci.org/18F/epa-notice)
+[![Dependency Status](https://gemnasium.com/badges/github.com/18F/epa-notice.svg)](https://gemnasium.com/github.com/18F/epa-notice)
+[![Code Climate](https://codeclimate.com/github/18F/epa-notice/badges/gpa.svg)](https://codeclimate.com/github/18F/epa-notice)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/0ebfb2ac6bd84f8bbea0f434c92dfac4/badge.svg)](https://www.quantifiedcode.com/app/project/0ebfb2ac6bd84f8bbea0f434c92dfac4)
 
 Glue project which combines regulations-site, regulations-core and
 styles/templates for EPA's eManifest proposal, packaged as a cloud.gov app.
