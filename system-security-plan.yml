@@ -52,14 +52,14 @@ staff:
     email: christopher.lubinski@gsa.gov
 leveraged-authorizations:
 - https://www.fedramp.gov/marketplace/compliant-systems/amazon-web-services-aws-eastwest-us-public-cloud/
-purpose: https://github.com/eregs/notice-and-comment
+purpose: https://github.com/18F/epa-notice
 components:
 - https://github.com/eregs/regulations-core
 - https://github.com/eregs/regulations-site
 
 # these will be the same unless your architecture is especially complex
-system-diagram: https://github.com/eregs/notice-and-comment#network-architecture
-network-diagram: https://github.com/eregs/notice-and-comment#network-architecture
+system-diagram: https://github.com/18F/epa-notice#network-architecture
+network-diagram: https://github.com/18F/epa-notice#network-architecture
 
 environments:
 - Cloud Foundry
@@ -70,5 +70,5 @@ user-types:
     - deployment
     - engineering
 controls:
-- https://github.com/eregs/notice-and-comment#updating-data
+- https://github.com/18F/epa-notice#updating-data
 - https://github.com/eregs/regulations-core#security

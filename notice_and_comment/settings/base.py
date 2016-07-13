@@ -9,8 +9,10 @@ REGCORE_DATABASES = dict(DATABASES)
 from regulations.settings.base import *  # noqa
 REGSITE_APPS = tuple(INSTALLED_APPS)
 
-INSTALLED_APPS = ('overextends', 'notice_and_comment',) + REGCORE_APPS + REGSITE_APPS
+INSTALLED_APPS = ('overextends',
+                  'notice_and_comment',) + REGCORE_APPS + REGSITE_APPS
 
+DISABLE_ROBOTS = os.environ.get('DISABLE_ROBOTS')
 ROOT_URLCONF = 'notice_and_comment.urls'
 
 DATABASES = REGCORE_DATABASES
@@ -113,7 +115,7 @@ PREAMBLE_INTRO = {
             "comments_close": "2016-05-29",
             "publication": "2016-02-29",    # to be removed
             "publication_date": "2016-02-29",
-            "cfr_parts": [{"title": "40", "parts": ["300"]}], # to be removed
+            "cfr_parts": [{"title": "40", "parts": ["300"]}],  # to be removed
             "cfr_refs": [{"title": "40", "parts": ["300"]}],
             "dockets": ["EPA-HQ-SFUND-2010-1086",
                         "FRL-9925-69-OLEM"],
@@ -129,7 +131,7 @@ PREAMBLE_INTRO = {
             "comments_close": "2016-04-29",
             "publication": "2016-02-29",    # to be removed
             "publication_date": "2016-02-29",
-            "cfr_parts": [{"title": "40", "parts": ["300"]}], # to be removed
+            "cfr_parts": [{"title": "40", "parts": ["300"]}],  # to be removed
             "cfr_refs": [{"title": "40", "parts": ["300"]}],
             "dockets": ["EPA-HQ-SFUND-2010-1086",
                         "FRL-9925-69-OLEM"],
@@ -156,5 +158,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
-    'notice_and_comment.basic_auth.BasicAuthMiddleware'
 )
+
+if os.getenv('WHOLE_SITE_AUTH'):
+    MIDDLEWARE_CLASSES += (
+        'notice_and_comment.basic_auth.BasicAuthMiddleware',
+    )

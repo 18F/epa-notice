@@ -1,8 +1,8 @@
 # EPA eManifest/eRegs Notice and Comment Pilot
-[![Build Status](https://travis-ci.org/eregs/notice-and-comment.svg?branch=master)](https://travis-ci.org/eregs/notice-and-comment)
-[![Dependency Status](https://gemnasium.com/badges/github.com/eregs/notice-and-comment.svg)](https://gemnasium.com/github.com/eregs/notice-and-comment)
-[![Code Climate](https://codeclimate.com/github/eregs/notice-and-comment/badges/gpa.svg)](https://codeclimate.com/github/eregs/notice-and-comment)
-[![Code Issues](https://www.quantifiedcode.com/api/v1/project/6115cfa655a041c09bff33c8a6a0bca5/badge.svg)](https://www.quantifiedcode.com/app/project/6115cfa655a041c09bff33c8a6a0bca5)
+[![Build Status](https://travis-ci.org/18F/epa-notice.svg?branch=master)](https://travis-ci.org/18F/epa-notice)
+[![Dependency Status](https://gemnasium.com/badges/github.com/18F/epa-notice.svg)](https://gemnasium.com/github.com/18F/epa-notice)
+[![Code Climate](https://codeclimate.com/github/18F/epa-notice/badges/gpa.svg)](https://codeclimate.com/github/18F/epa-notice)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/0ebfb2ac6bd84f8bbea0f434c92dfac4/badge.svg)](https://www.quantifiedcode.com/app/project/0ebfb2ac6bd84f8bbea0f434c92dfac4)
 
 Glue project which combines regulations-site, regulations-core and
 styles/templates for EPA's eManifest proposal, packaged as a cloud.gov app.
@@ -192,7 +192,7 @@ not already cached).
 
 ### Network Architecture
 
-![Diagram, described below](docs/network-architecture.svg)
+![Diagram, described below](docs/network-architecture.png)
 
 There are two running applications, `eregs-web`, which handles web requests,
 querying the appropriate data store, and `eregs-worker`, which generates PDFs
@@ -203,7 +203,7 @@ for sourcing asynchronous data, and S3 (`eregsnc-s3`) for storing attachments
 and processed files. We also use a "user-provided" cloud.gov service for
 storing credential information (`eregsnc-creds`).
 
-![Diagram, described below](docs/activity-diagram.svg)
+![Diagram, described below](docs/activity-diagram.png)
 
 The user's browser communicates with `eregs-web` and `s3` (the latter via
 pre-generated urls which allow limited upload and read capabilities).
@@ -303,11 +303,18 @@ what you have locally and regardless of what you’ve built the front-end
 against. Be sure to always update your local libraries (via pip) before
 building and pushing.
 
+### Read Authentication
+
+The environment variable, `WHOLE_SITE_AUTH`, will throw up a BASIC auth wall
+across the _entire_ site using Django middleware. For simplicity, this will
+reuse the existing `HTTP_AUTH_USER` and `HTTP_AUTH_PASSWORD` used by the write
+API.
+
 ### Non-Cloud.gov
 TODO; see `manifest` files, the cloud.gov documentation and
 https://atf-eregs.readthedocs.io/en/latest/production_setup.html#non-cloud-gov
 
-### Visual regression tests
+## Visual regression tests
 Visual regression tests can be run via BackstopJS.
 If not already installed, install BackstopJS via npm:
 ```
@@ -321,13 +328,13 @@ via a unique URL.
 
 #### Reference set capture
 Before visual regression testing can begin, reference screenshots need to be captured.
-A reference set can be captured by this command in the `node_modules/backstop_data/` directory:
+A reference set can be captured by this command in the `node_modules/backstopjs/` directory:
 ```
 npm run reference
 ```
 After the reference set capture is finished, then tests can be run against the reference set.
 Currently in `backstop.json` there are reference capture scenarios for:
-- N&C Homepage
+- N&amp;C Homepage
 - Preamble Section I
 - Write mode on Section I
 - Review your full comment with a blank Section I comment
@@ -335,13 +342,13 @@ Currently in `backstop.json` there are reference capture scenarios for:
 in screen sizes for phone, tablet and desktop.
 
 #### Running tests
-Tests must be run in the `node_modules/backstop_data/` directory with this command:
+Tests must be run in the `node_modules/backstopjs/` directory with this command:
 ```
 npm run test
 ```
 
 #### Viewing the report
-Timestamped directories of tests will be created in `node_modules/backstop_data/bitmaps_test/`
+Timestamped directories of tests will be created in `notice-and-comment/backstop_data/bitmaps_test/`
 folder. After the tests run, the browser will open a BackstopJS report but may not show
 any passing or failing tests. Upon command line prompt you might have to additionally run:
 ```
