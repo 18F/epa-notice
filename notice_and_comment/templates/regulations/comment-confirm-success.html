@@ -1,0 +1,101 @@
+{% overextends "regulations/comment-confirm-success.html" %}
+
+{% block alert-text %}
+<div class="alert-text">
+  <h3>Success!</h3>
+  <p>Thank you for submitting your comment to EPA. You're done!</p>
+</div>
+{% endblock %}
+
+{% block tracking-number-explanation %}
+<p>
+  The first step EPA takes is to assign your comment a tracking number.
+  This page automatically displays that number when received:
+</p>
+{% endblock %}
+
+{% block regsgov-error-template %}
+<script class="js-regsgov-error" type="text/template">
+  <div class="status">
+    <div class="status-message">
+      <strong>
+        <span class="fa fa-exclamation-triangle"></span>
+        Sorry, we were not able to send your comment to the EPA docket at this
+        time.
+      </strong>
+    </div>
+  </div>
+  <div class="status-waiting">
+    <div class="fa fa-info-circle fa-fw"></div>
+    <div class="waiting-message">
+      This does not affect your comment! We will send your comment to the
+      EPA, and they will process it (their system may be busy at the
+      moment). You will be able to find your comment using keyword
+      searches after they process it, usually a few days.
+    </div>
+  </div>
+</script>
+{% endblock %}
+
+{% block what-will-happen %}
+<section class="what-will-happen">
+
+  <h4>What will happen to your comment</h4>
+  <h5>EPA will process it and in most cases will post it publicly</h5>
+  <ul>
+    <li>
+      EPA will process your comment, which may take a few days or weeks depending
+      on the number of comments received. In a few cases EPA may decline to evaluate
+      or post your comment, as listed in
+      <a href="https://www.epa.gov/dockets/commenting-epa-dockets#rules" target="_blank">
+        its rules and restrictions for comments <span class="cf-icon cf-icon-external-link"></span>
+      </a>.
+    </li>
+    <li>
+      In most cases, EPA will post your comment to
+      {% comment %}TODO: Replace static text with this link
+      <a href="#" target="_blank">the docket folder for this proposed rule <span class="cf-icon cf-icon-external-link"></span></a>.
+      {% endcomment %}
+      the docket folder for this proposed rule.
+      Then you will be able to find your comment there or by searching
+      <a href="https://www.regulations.gov" target="_blank">Regulations.gov <span class="cf-icon cf-icon-external-link"></span></a>
+      for your comment tracking number or keywords from your comment.
+    </li>
+  </ul>
+
+  <h5>EPA will review eligible comments and will usually publish a final rule</h5>
+  <ul>
+    <li>
+      After this comment period ends, EPA will review the comments, and usually
+      EPA’s next step is to prepare a final rule that includes responses to major
+      comments. EPA may decide to not go through with preparing a final rule,
+      although this is unusual.
+    </li>
+    <li>
+      If you'd like to hear about the potential final rule, you can
+      <a href="https://www.federalregister.gov/agencies/environmental-protection-agency" target="_blank">
+        subscribe to EPA rulemaking updates <span class="cf-icon cf-icon-external-link"></span>
+      </a>.
+    </li>
+  </ul>
+
+</section>
+{% endblock %}
+
+{% block feedback %}
+<section class="feedback">
+
+  <h4>You can give feedback on this tool</h4>
+  <div>
+    This eRegulations commenting tool was developed by <a href="https://18f.gsa.gov/" target="_blank">18F <span class="cf-icon cf-icon-external-link"></span></a>
+    (part of the <a href="http://www.gsa.gov/" target="_blank">General Services Administration <span class="cf-icon cf-icon-external-link"></span></a>)
+    in partnership with EPA. The designers and developers would like to hear
+    your thoughts about this tool, including suggestions for improving it. To
+    give feedback <a href="https://github.com/18F/epa-notice/issues" target="_blank">open a new issue in this repository <span class="cf-icon cf-icon-external-link"></span></a>
+    (requires a free login).
+  </div>
+
+</section>
+<script type="text/javascript" language="javascript" src="//ethn.io/36020.js"
+        async="true" charset="utf-8"></script>
+{% endblock %}

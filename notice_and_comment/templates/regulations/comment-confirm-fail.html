@@ -1,0 +1,16 @@
+{% overextends "regulations/comment-confirm-fail.html" %}
+
+{% block other-options %}
+<ul>
+  <li>
+    <strong>Come back here later and try submitting your comment again.</strong>
+  </li>
+  <li>
+    <strong>Use a different way to submit your comment.</strong>
+    You can <a href="{{regs_gov_url}}" target="_blank">go to this proposed rule on Regulations.gov and submit your comment there <span class="cf-icon cf-icon-external-link"></span></a>.
+  </li>
+  <li>
+    <strong>Let us know about the problem.</strong>
+    You can email <a href="mailto:will.sullivan@gsa.gov">will.sullivan@gsa.gov <span class="cf-icon cf-icon-external-link"></span></a> to tell the team that built this tool about the problem — we'll look into this and try to fix it.</li>
+</ul>
+{% endblock %}
