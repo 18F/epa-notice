@@ -49,14 +49,12 @@ if s3:
     ATTACHMENT_SECRET_ACCESS_KEY = s3.credentials.get('secret_access_key')
     ATTACHMENT_BUCKET = s3.credentials.get('bucket')
 
-REGS_GOV_API_URL = env.get_credential(
-    'REGS_GOV_API_URL', os.environ.get('REGS_GOV_API_URL'))
-REGS_GOV_API_LOOKUP_URL = env.get_credential(
-    'REGS_GOV_API_LOOKUP_URL', os.environ.get('REGS_GOV_API_LOOKUP_URL'))
-REGS_GOV_API_KEY = env.get_credential(
-    'REGS_GOV_API_KEY', os.environ.get('REGS_GOV_API_KEY'))
+REGS_GOV_API_URL = env.get_credential('REGS_GOV_API_URL')
+REGS_GOV_API_LOOKUP_URL = env.get_credential('REGS_GOV_API_LOOKUP_URL')
+REGS_GOV_API_KEY = env.get_credential('REGS_GOV_API_KEY')
 HTTP_AUTH_USER = env.get_credential('HTTP_AUTH_USER')
 HTTP_AUTH_PASSWORD = env.get_credential('HTTP_AUTH_PASSWORD')
+COMMENT_DOCUMENT_ID = env.get_credential('DOCUMENT_ID')
 
 # HTTP Auth may have be different due to the above lines
 if HTTP_AUTH_USER and HTTP_AUTH_PASSWORD:
