@@ -5,12 +5,14 @@ from django.http import HttpResponse
 
 from regcore import urls as regcore_urls
 from regulations import urls as regsite_urls
-from nc_caches import homepage_non_cache
 from regulations.views.notice_home import NoticeHomeView
+from regulations.views.preamble import PreambleView
 
 urlpatterns = [
-    url(r'^$', homepage_non_cache(NoticeHomeView.as_view(
-        template_name='regulations/nc-homepage.html'))),
+    url(r'^$', NoticeHomeView.as_view(
+        template_name='regulations/nc-homepage.html')),
+    url(r'^preamble/(?P<paragraphs>[-\w]+(/[-\w]+)*)$',
+        PreambleView.as_view(), name='chrome_preamble'),
     url(r'^api/', include(regcore_urls))
 ] + regsite_urls.urlpatterns
 
