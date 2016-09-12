@@ -5,12 +5,16 @@ from django.http import HttpResponse
 
 from regcore import urls as regcore_urls
 from regulations import urls as regsite_urls
-from regulations.url_caches import daily_cache
 from regulations.views.notice_home import NoticeHomeView
+from regulations.views.preamble import PreambleView
 
 urlpatterns = [
-    url(r'^$', daily_cache(NoticeHomeView.as_view(
-        template_name='regulations/nc-homepage.html'))),
+    url(r'^$', NoticeHomeView.as_view(
+        template_name='regulations/nc-homepage.html')),
+    # The following overrides the URL set in regulations-site, to not use the
+    # daily_cache decorator for the intro.
+    url(r'^preamble/(?P<paragraphs>[-\w]+/intro)$',
+        PreambleView.as_view(), name='chrome_preamble'),
     url(r'^api/', include(regcore_urls))
 ] + regsite_urls.urlpatterns
 
