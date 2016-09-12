@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^$', NoticeHomeView.as_view(
         template_name='regulations/nc-homepage.html')),
     # The following overrides the URL set in regulations-site, to not use the
-    # daily_cache generator for the intro.
+    # daily_cache decorator for the intro.
     url(r'^preamble/(?P<paragraphs>[-\w]+/intro)$',
         PreambleView.as_view(), name='chrome_preamble'),
     url(r'^api/', include(regcore_urls))
