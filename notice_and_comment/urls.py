@@ -5,11 +5,11 @@ from django.http import HttpResponse
 
 from regcore import urls as regcore_urls
 from regulations import urls as regsite_urls
-from regulations.url_caches import daily_cache
+from nc_caches import homepage_non_cache
 from regulations.views.notice_home import NoticeHomeView
 
 urlpatterns = [
-    url(r'^$', daily_cache(NoticeHomeView.as_view(
+    url(r'^$', homepage_non_cache(NoticeHomeView.as_view(
         template_name='regulations/nc-homepage.html'))),
     url(r'^api/', include(regcore_urls))
 ] + regsite_urls.urlpatterns
