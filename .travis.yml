@@ -1,27 +1,26 @@
 language: python
 sudo: false
 python:
-  - "3.4"
+- '3.4'
 env:
   global:
-  # Set cloud.gov credentials
-  - secure: Nug1KbzIWSVCkW6ga1zZCmtLvMdKilMYW43UThhJ0De4uIFj2wMRPdVC+0cK4RRwYdNqlMPkU/19l66m+TZuQNyjya+vyapJeLMVOVmEVrk+mrDXievllde6WTKByFP3kEwc8IXCW782BzeSdtMsebZ9wIDhMnWpUguIMP3ltimny2I1XC75mkwPN7nxmbKx9P6NWs1B0WZgwN9GNJg0nPtn6oDhK01mQTbp3/Z3it8sovUzMxup2tbU6Pnh42CaHE49iLYPr7axuYG4o02AAK3PsJFnELe9xtUZSB3KZ+u3KYRGynq0qPZ1WX4TpeqGLvyfqvw6iuB6jDud9UBSfmcgQqziig3uZOmbnAObr0dRvrWIZabmGm+IBKKNGlWu4mITv/YKZGadF/Q3OphRHRZSvN9g2HzzCu7O1GZfjUlTAS4b4W1QL+L5NYpFOtaFyIjSekQkFposvLNynDUWcJdozvlflpFgsUNRXDUxNqePPdjNjcZmlKDvK5OyrtZCOTRh6eHjchRcGm7nSuo/y3SM8JHySOWTZLffxl+TP4hb/s8US01qtKfYZV7ZaycNoeatt3zUF0t6AJCul6Db8FVWg0+eUB7uLuPa/zyZ9DqD9kzTN9INJmeyq4ppi8ZwQ2lDlU+loZLZSMNtyUS0/rFISIOKi32byOqxViQMDc4=
-  - secure: S53oowfOLMqc+kOTu++sftkudJKtfWwA2q5pdKtiq+tS+Zaz+2dTHEqgCnjtZXXTodrrEwOg6haugbqCDvT10fk1wpCtsLaRfJAjI639LaA6b2XnmzIJv+iWiz56+uqVTfLX5e1vLKdg/5qi4xDeiUBPirebt/iDaEizAJ+pZ8DmFGDnrjgzOiFI1lszhdlAhltr9l/8rLbi+HnSSktStHkncKtYF99CnqhRy1vAiKaqZwpb4m592wlB0qnUQrKtbykP2sSX2LNetAF9wrifrpPpt4SGGajMmmZ3wcSu1k8B/VbZ8sQ2S7odBq+0TCS0XHqq2v0V10EKfnmpnyiTWCd2C3WZgtZnWpkxxbheltYzLgaxh/4LvYD6U7uVVHSZHxYewqeoWmS+V/7gDSecKY9tVfKoTp5BQY0i6O2TagsiKQ4oeAsi/nr8CmqHBldWdSQaVjiFenZ/T7LOe3gn5JwW3pv9fEQIL6Eb9PuqQO+yntpkyaI7NCn4U7tJvlYsCOdK/QwMJFzsVRtHdRLCDpZuwD3+ID6v6QzJClHDFzHNZfUjVrTBDl0IW7ztkjS0kENG06VYjb0cz3bX/Vmwoy728zHYJxBgVB5ZdJnJCd/pgfaefibp2EWMZZSjZ3almnWfnbYuNHUcHCnKppYsjjUqrnajguO+Y4zoS63asf4=
+  - secure: c11+wzchflpNcPg1lNdRrdcOvNfcc+j+3pPjh3oKMn1+CjKj7IN4gkc/ueYY7LGgEEr8Hq4ZpxDdXBlwBM3aBRYtTVuZNjSbKjG3zYcyflv0bqMYUYHwP+dYI2YZnw2RGhuTBVZ26W1CLSwf8zk+Q4lQALnwIkdssMiNxRuIldKRIG8ZPCAJ+PnCvscHOHzx1fD87Ow8C9Ng5QEC+Gs7LAqswUOoIf4vX1X1mUE6Fm1PUkSrjKj62qXaDboQAyXErlblpwPvvbfpts+zJvMIL9PYtDPQiDPNDsjgzKrRKb9yE/KkgQRwhuTjDi6mlrIH9nmSCqBRYh8MPe77DfBjKNIjtXGzwYiyjeoOnIq9xfl+3fVTaBn+nua44ndPKSJ11Hv1Auk80p2v6Mdl1PBKSfaA1RIo87TIAuerZvDryOW7OLJly3rBg07GfVMPQ1ZgAY4ue1xNcNl1LxbyMdoHKPvLIAPCkwC++QvD+vsoUuz+t1UUjbSvTRzJLRzkU3Bcw2lulMnnumysHjP60ixK/40IJLUINPvbyFqG8hUW6OlpXtP5Qe3VAXAPCbwqGAlNnyoRW+cycXIETZx8d+h6QEdlS0zENg0K5349yexxJxpOxXciZqzlnP9qzKDXHUQIG2pl0VzOueh2zqoqN+dOrZ4NRGDRdjBt1TBcCZZRHRY=
+  - secure: DF4QYnclQf3dK5mxeHE8Y2f8+U8vVF3qi0YBbn1zz2Mrk56EDL685PrtbtQkWryEGSZFaQ12Lp0QfeX7gOlxxGbpngej1dxXgulehpCFgbgtFl/Tg/99VtqwQD3Y/sK9m9FRa5qSGD3TqoZsiyi9puMxECBtG4oLl7ZAxpYEHIOITd8BRrGjCmAYfPWQyW2pryZqbQxP2cIVLq0L5Ig8a+Pr+z2HTrbeBa3egwqoGcPac9ECYSKLH9HTBGOLl3vBc6a87QdRz0rwmiq1Z+0z9A1bIO97By3IVBuxE6ZFvMJVbKogl10HxasRTXxv6DU5temO4trTB/1uKz2WyaBwNAzaIX9b3ZqTCoFUnTFIgBKP0ynBhy14vQkb0GAWh3rywAorFqIA291lLH25MnLyB7hckl2eGHYaswN2wjDyU9AG2OlswKn8Y6yfEndmp3xWMYDxoarRQ2wBFssouWHRrIKbdobOGGiZ5Y6I80xPKASXtx3UbVbABlZoRkVUxqLC3lFDZFzW0b2YIEl5iLlrtSuZV5pk861MRB22iX88s1WFD6jHvmd56KhgLKFHCcvcV+cEFBi5BtCqzGpfrBd6pt726acLJfrR4vdBQfJtL44VOF2hMRvltwrM/KBbxmljE8CjYmlkvnJlQlddldHOMz/HowFElvxmCGWaGpCaz2Q=
 install:
-  - pip install -r requirements.txt
-  - pip install git+https://github.com/openstack/bandit.git
-  - npm install -g grunt-cli
-  - gem install sass
+- pip install -r requirements.txt
+- pip install git+https://github.com/openstack/bandit.git
+- npm install -g grunt-cli
+- gem install sass
 script:
-  - python manage.py migrate --fake-initial
-  - python manage.py compile_frontend
-  - bandit -r .
+- python manage.py migrate --fake-initial
+- python manage.py compile_frontend
+- bandit -r .
 before_deploy:
-  - export PATH=$HOME:$PATH
-  - travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.15.0"
-  - tar xzvf $HOME/cf.tgz -C $HOME
-  - travis_retry cf install-plugin autopilot -f -r CF-Community
+- export PATH=$HOME:$PATH
+- travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.15.0"
+- tar xzvf $HOME/cf.tgz -C $HOME
+- travis_retry cf install-plugin autopilot -f -r CF-Community
 deploy:
   provider: script
-  script: ./deploy-travis.sh
+  script: "./deploy-travis.sh"
   skip_cleanup: true
