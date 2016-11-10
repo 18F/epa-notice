@@ -17,7 +17,7 @@ ROOT_URLCONF = 'notice_and_comment.urls'
 
 DATABASES = REGCORE_DATABASES
 
-_port = os.environ.get('VCAP_APP_PORT', '8000')
+_port = os.environ.get('PORT', '8000')
 if HTTP_AUTH_USER and HTTP_AUTH_PASSWORD:
     API_BASE = 'http://{}:{}@localhost:{}/api/'.format(
         HTTP_AUTH_USER, HTTP_AUTH_PASSWORD, _port)
