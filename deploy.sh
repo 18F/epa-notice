@@ -4,6 +4,7 @@ API="https://api.cloud.gov"
 ORG="eregs-nc"
 APP_NAME="eregs-web"
 WORKER_NAME="eregs-worker"
+DEV_INSTANCES=2
 PROD_INSTANCES=3
 SPACE=$1
 
@@ -32,4 +33,7 @@ if [ $SPACE = 'prod' ]; then
   # memory ceiling. Note that this workaround won't be needed when the memory
   # quota goes away
   cf scale $APP_NAME -i $PROD_INSTANCES
+elif [ $SPACE = 'dev' ]; then
+  # See above
+  cf scale $APP_NAME -i $DEV_INSTANCES
 fi
