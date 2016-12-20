@@ -14,7 +14,7 @@ requests==2.10.0
 requests-toolbelt==0.6.2
 django-redis==4.4.3
 markdown2==2.3.1
--e git+https://github.com/eregs/regulations-site.git@6.0.2#egg=regulations
+-e git+https://github.com/eregs/regulations-site.git@6.0.0#egg=regulations
 
 # cloud.gov
 celery[redis]==3.1.23
