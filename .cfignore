@@ -63,10 +63,6 @@ local_settings.py
 # Local frontend build
 frontend_build/
 
-# wkhtmltox except the binary
-wkhtmltox*
-!wkhtmltox/bin/wkhtmltopdf
-
 # Visual regression
 backstop_data/
 node_modules/
